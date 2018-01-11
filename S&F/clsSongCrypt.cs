@@ -6,7 +6,7 @@ using System.IO;
 using System.Configuration;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public delegate void updateProgressDelegate();
     public delegate void CloseProgressDelegate();

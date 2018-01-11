@@ -13,7 +13,7 @@ using System.Net;
 using System.Data.OleDb;
 using System.Globalization;
 
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public partial class Clientlogin : Form
     {
@@ -572,7 +572,7 @@ namespace AlenkaMyClaudPlayer
             
             return;
             string localPath = Application.StartupPath + "\\198.ogg";
-            string FileLocation = "ftp://146.0.229.66:21/oggfiles/408635.ogg";
+            string FileLocation = "ftp://37.61.214.210:21/oggfiles/408635.ogg";
             //if (isValidConnection(FileLocation, "FtpParas", "moh!@#123") == false)
             //{
             //    MessageBox.Show("Error");
@@ -770,21 +770,21 @@ namespace AlenkaMyClaudPlayer
                     if (OldVersion < UpdateVersion)
                     {
 
-                        VersionApplicationPath = Application.StartupPath + "\\UpdateAlenkaMyClaudPlayer.exe";
+                        VersionApplicationPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
 
                         
 
                         #region Update
 
-                        string localPath = Application.StartupPath + "\\UpdateAlenkaMyClaudPlayer.exe";
-                        string UpdateFileLocation = "ftp://146.0.229.66:21/NativePlayer/Copyright/UpdateAlenkaMyClaudPlayer.exe";
+                        string localPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
+                        string UpdateFileLocation = "ftp://85.195.82.94:21/NativePlayer/Copyright/UpdateStoreAndForwardPlayer.exe";
 
 
                         try
                         {
 
                             FtpWebRequest requestFileDownload = (FtpWebRequest)WebRequest.Create(UpdateFileLocation);
-                            requestFileDownload.Credentials = new NetworkCredential("FtpParas", "moh!@#123");
+                            requestFileDownload.Credentials = new NetworkCredential("harish", "Mohali123");
                             requestFileDownload.KeepAlive = true;
                             requestFileDownload.UseBinary = true;
                             requestFileDownload.UsePassive = false;
@@ -835,7 +835,7 @@ namespace AlenkaMyClaudPlayer
                         Process[] prs = Process.GetProcesses();
                         foreach (Process pr in prs)
                         {
-                            if (pr.ProcessName == "AlenkaMyClaudPlayer")
+                            if (pr.ProcessName == "StoreAndForwardPlayer")
                                 pr.Kill();
                         }
                     }

@@ -1,4 +1,4 @@
-﻿namespace AlenkaMyClaudPlayer
+﻿namespace StoreAndForwardPlayer
 {
     partial class CopyrightPlayer
     {
@@ -157,6 +157,7 @@
             this.picBackPlayer = new System.Windows.Forms.PictureBox();
             this.lblAdvtTimeRemain = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lblExpiryPlayer = new System.Windows.Forms.Label();
             this.panUpcomingAdvt = new System.Windows.Forms.Panel();
             this.lblUpcomingAdvtName = new System.Windows.Forms.Label();
             this.lblPercentage = new System.Windows.Forms.Label();
@@ -169,7 +170,6 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.dgTotalTitles = new System.Windows.Forms.DataGridView();
             this.lblSanjivaniExpiry = new System.Windows.Forms.Label();
-            this.lblExpiryPlayer = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panPlaylist = new System.Windows.Forms.Panel();
             this.panPlaylistGrid = new System.Windows.Forms.Panel();
@@ -243,7 +243,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bgUpdatedExeDownload = new System.ComponentModel.BackgroundWorker();
-            this.timSeparation = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgMusicPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMusicPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlaylist)).BeginInit();
@@ -414,7 +413,7 @@
             // 
             // picSavePlaylist
             // 
-            this.picSavePlaylist.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Save2;
+            this.picSavePlaylist.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Save2;
             this.picSavePlaylist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSavePlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSavePlaylist.Location = new System.Drawing.Point(231, 18);
@@ -650,7 +649,6 @@
             // panelMainPlayer
             // 
             this.panelMainPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.panelMainPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMainPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMainPlayer.Controls.Add(this.tlpMain);
             this.panelMainPlayer.Controls.Add(this.btnShop);
@@ -692,7 +690,7 @@
             // 
             // panMusicOne
             // 
-            this.panMusicOne.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.CurrentPlayer;
+            this.panMusicOne.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.CurrentPlayer;
             this.panMusicOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panMusicOne.Controls.Add(this.panel23);
             this.panMusicOne.Controls.Add(this.dgSongRatingPlayerOne);
@@ -878,7 +876,7 @@
             // 
             // panMusicTwo
             // 
-            this.panMusicTwo.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.DisablePlayer;
+            this.panMusicTwo.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.DisablePlayer;
             this.panMusicTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panMusicTwo.Controls.Add(this.panel26);
             this.panMusicTwo.Controls.Add(this.dgSongRatingPlayerTwo);
@@ -1065,7 +1063,7 @@
             // btnShuffle
             // 
             this.btnShuffle.BackColor = System.Drawing.Color.Transparent;
-            this.btnShuffle.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.shuffle_blue;
+            this.btnShuffle.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.shuffle_blue;
             this.btnShuffle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShuffle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShuffle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
@@ -1085,7 +1083,7 @@
             // btnMute
             // 
             this.btnMute.BackColor = System.Drawing.Color.Transparent;
-            this.btnMute.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Mute_blue;
+            this.btnMute.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Mute_blue;
             this.btnMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMute.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
@@ -1105,7 +1103,7 @@
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlay.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Pause_Blue;
+            this.btnPlay.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Pause_Blue;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
@@ -1125,7 +1123,7 @@
             // btnFade
             // 
             this.btnFade.BackColor = System.Drawing.Color.Transparent;
-            this.btnFade.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Fade;
+            this.btnFade.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Fade;
             this.btnFade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
@@ -1144,7 +1142,7 @@
             // picFade
             // 
             this.picFade.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picFade.Image = global::AlenkaMyClaudPlayer.Properties.Resources.SongFade;
+            this.picFade.Image = global::StoreAndForwardPlayer.Properties.Resources.SongFade;
             this.picFade.Location = new System.Drawing.Point(6, 43);
             this.picFade.Name = "picFade";
             this.picFade.Size = new System.Drawing.Size(57, 40);
@@ -1260,7 +1258,7 @@
             // 
             // picSongPlay
             // 
-            this.picSongPlay.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Play_Blue;
+            this.picSongPlay.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Play_Blue;
             this.picSongPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSongPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSongPlay.Location = new System.Drawing.Point(84, 0);
@@ -1302,7 +1300,7 @@
             // 
             // picLock
             // 
-            this.picLock.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.AdvtImg;
+            this.picLock.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.AdvtImg;
             this.picLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLock.Location = new System.Drawing.Point(5, 0);
@@ -1335,7 +1333,7 @@
             this.lblAdvtMainTime.BackColor = System.Drawing.Color.Transparent;
             this.lblAdvtMainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lblAdvtMainTime.ForeColor = System.Drawing.Color.Red;
-            this.lblAdvtMainTime.Location = new System.Drawing.Point(101, 4);
+            this.lblAdvtMainTime.Location = new System.Drawing.Point(556, 4);
             this.lblAdvtMainTime.Name = "lblAdvtMainTime";
             this.lblAdvtMainTime.Size = new System.Drawing.Size(62, 25);
             this.lblAdvtMainTime.TabIndex = 38;
@@ -1346,7 +1344,7 @@
             // 
             // picSaveLast100Playlist
             // 
-            this.picSaveLast100Playlist.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.Save2;
+            this.picSaveLast100Playlist.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.Save2;
             this.picSaveLast100Playlist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picSaveLast100Playlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSaveLast100Playlist.Location = new System.Drawing.Point(252, 14);
@@ -1408,7 +1406,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.BackPlayer;
+            this.pictureBox5.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.BackPlayer;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Location = new System.Drawing.Point(4, 6);
@@ -1467,7 +1465,7 @@
             // 
             // picBackPlayer
             // 
-            this.picBackPlayer.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.BackPlayer;
+            this.picBackPlayer.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.BackPlayer;
             this.picBackPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBackPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBackPlayer.Location = new System.Drawing.Point(4, 6);
@@ -1494,6 +1492,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Controls.Add(this.lblExpiryPlayer);
             this.panel8.Controls.Add(this.lblAdvtMainTime);
             this.panel8.Controls.Add(this.button3);
             this.panel8.Controls.Add(this.panUpcomingAdvt);
@@ -1509,7 +1508,6 @@
             this.panel8.Controls.Add(this.dgHideSongs);
             this.panel8.Controls.Add(this.dgTotalTitles);
             this.panel8.Controls.Add(this.lblSanjivaniExpiry);
-            this.panel8.Controls.Add(this.lblExpiryPlayer);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.label1);
@@ -1521,14 +1519,26 @@
             this.panel8.Size = new System.Drawing.Size(1004, 34);
             this.panel8.TabIndex = 44;
             // 
+            // lblExpiryPlayer
+            // 
+            this.lblExpiryPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.lblExpiryPlayer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
+            this.lblExpiryPlayer.ForeColor = System.Drawing.Color.Red;
+            this.lblExpiryPlayer.Location = new System.Drawing.Point(66, 3);
+            this.lblExpiryPlayer.Name = "lblExpiryPlayer";
+            this.lblExpiryPlayer.Size = new System.Drawing.Size(246, 21);
+            this.lblExpiryPlayer.TabIndex = 30;
+            this.lblExpiryPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panUpcomingAdvt
             // 
+            this.panUpcomingAdvt.BackColor = System.Drawing.Color.Transparent;
             this.panUpcomingAdvt.Controls.Add(this.lblUpcomingAdvtName);
             this.panUpcomingAdvt.Controls.Add(this.lblAdvtTimeRemain);
             this.panUpcomingAdvt.Dock = System.Windows.Forms.DockStyle.Left;
             this.panUpcomingAdvt.Location = new System.Drawing.Point(0, 0);
             this.panUpcomingAdvt.Name = "panUpcomingAdvt";
-            this.panUpcomingAdvt.Size = new System.Drawing.Size(395, 30);
+            this.panUpcomingAdvt.Size = new System.Drawing.Size(378, 30);
             this.panUpcomingAdvt.TabIndex = 42;
             // 
             // lblUpcomingAdvtName
@@ -1539,7 +1549,7 @@
             this.lblUpcomingAdvtName.ForeColor = System.Drawing.Color.White;
             this.lblUpcomingAdvtName.Location = new System.Drawing.Point(41, 0);
             this.lblUpcomingAdvtName.Name = "lblUpcomingAdvtName";
-            this.lblUpcomingAdvtName.Size = new System.Drawing.Size(354, 30);
+            this.lblUpcomingAdvtName.Size = new System.Drawing.Size(337, 30);
             this.lblUpcomingAdvtName.TabIndex = 21;
             this.lblUpcomingAdvtName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1691,17 +1701,6 @@
             this.lblSanjivaniExpiry.TabIndex = 31;
             this.lblSanjivaniExpiry.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblExpiryPlayer
-            // 
-            this.lblExpiryPlayer.AutoSize = true;
-            this.lblExpiryPlayer.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpiryPlayer.ForeColor = System.Drawing.Color.Red;
-            this.lblExpiryPlayer.Location = new System.Drawing.Point(2, 3);
-            this.lblExpiryPlayer.Name = "lblExpiryPlayer";
-            this.lblExpiryPlayer.Size = new System.Drawing.Size(0, 21);
-            this.lblExpiryPlayer.TabIndex = 30;
-            this.lblExpiryPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1818,7 +1817,6 @@
             // 
             // panPlaylistMain
             // 
-            this.panPlaylistMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panPlaylistMain.Controls.Add(this.panel21);
             this.panPlaylistMain.Controls.Add(this.panMainPlaylist);
             this.panPlaylistMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1829,7 +1827,6 @@
             // 
             // panel21
             // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panel21.Controls.Add(this.dgLocalPlaylist);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(0, 51);
@@ -1839,7 +1836,6 @@
             // 
             // panMainPlaylist
             // 
-            this.panMainPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panMainPlaylist.Controls.Add(this.label2);
             this.panMainPlaylist.Controls.Add(this.lblGreen);
             this.panMainPlaylist.Controls.Add(this.picSplGif);
@@ -1922,7 +1918,6 @@
             // 
             // panLast100
             // 
-            this.panLast100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panLast100.Controls.Add(this.dgLast100);
             this.panLast100.Controls.Add(this.panel22);
             this.panLast100.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1979,7 +1974,6 @@
             // 
             // panel22
             // 
-            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panel22.Controls.Add(this.picSaveLast100Playlist);
             this.panel22.Controls.Add(this.label16);
             this.panel22.Controls.Add(this.txtLastPlaylistName);
@@ -2025,7 +2019,6 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.panel13.Controls.Add(this.dgEvent);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(3, 22);
@@ -2128,7 +2121,7 @@
             // 
             // panAdvtPl
             // 
-            this.panAdvtPl.BackgroundImage = global::AlenkaMyClaudPlayer.Properties.Resources.CurrentPlayer;
+            this.panAdvtPl.BackgroundImage = global::StoreAndForwardPlayer.Properties.Resources.CurrentPlayer;
             this.panAdvtPl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panAdvtPl.Controls.Add(this.lblAdvtDuration);
             this.panAdvtPl.Controls.Add(this.lblAdvtMusic);
@@ -2650,11 +2643,6 @@
             this.bgUpdatedExeDownload.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgUpdatedExeDownload_DoWork);
             this.bgUpdatedExeDownload.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgUpdatedExeDownload_RunWorkerCompleted);
             // 
-            // timSeparation
-            // 
-            this.timSeparation.Interval = 1000;
-            this.timSeparation.Tick += new System.EventHandler(this.timSeparation_Tick);
-            // 
             // CopyrightPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2946,6 +2934,5 @@
         private System.Windows.Forms.DataGridView dgPrayer;
         private System.Windows.Forms.Panel panel2;
         private System.ComponentModel.BackgroundWorker bgUpdatedExeDownload;
-        private System.Windows.Forms.Timer timSeparation;
     }
 }

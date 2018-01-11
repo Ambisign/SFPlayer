@@ -1,4 +1,4 @@
-﻿namespace AlenkaMyClaudPlayer
+﻿namespace StoreAndForwardPlayer
 {
     partial class frmStart
     {
@@ -63,7 +63,7 @@
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(394, 42);
@@ -75,7 +75,7 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(394, 31);
@@ -97,7 +97,7 @@
             this.MaximizeBox = false;
             this.Name = "frmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AlenkaMyClaud Player";
+            this.Text = "Store & Forward Player";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStart_FormClosing);
             this.Load += new System.EventHandler(this.frmStart_Load);
             this.ResumeLayout(false);

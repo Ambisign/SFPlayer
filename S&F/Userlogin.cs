@@ -14,7 +14,7 @@ using System.IO;
 using System.Net;
 using System.Threading;
 using System.Data.OleDb;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     
     public partial class userlogin : Form

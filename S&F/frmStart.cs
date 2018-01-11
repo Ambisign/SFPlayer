@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using Microsoft.Win32;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public partial class frmStart : Form
     {
@@ -26,12 +26,12 @@ namespace AlenkaMyClaudPlayer
 
             if (ObjClass.CheckForInternetConnection() == false)
             {
-                MessageBox.Show("Please check your Internet connection.", "AlenkaMyClaudPlayer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please check your Internet connection.", "StoreAndForwardPlayer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
                 return;
             }
-            Link.Update(Environment.SpecialFolder.Startup, Application.ExecutablePath, "AlenkaMyClaudPlayer", false);
-            Link.Update(Environment.SpecialFolder.Startup, Application.ExecutablePath, "AlenkaMyClaudPlayer", true);
+            Link.Update(Environment.SpecialFolder.Startup, Application.ExecutablePath, "StoreAndForwardPlayer", false);
+            Link.Update(Environment.SpecialFolder.Startup, Application.ExecutablePath, "StoreAndForwardPlayer", true);
             string VersionApplicationPath = "";
             VersionApplicationPath = Application.StartupPath + "\\ImplementAdministratorRules_Player.exe";
             System.Diagnostics.Process.Start(VersionApplicationPath);
@@ -71,7 +71,7 @@ namespace AlenkaMyClaudPlayer
                         Process[] prs = Process.GetProcesses();
                         foreach (Process pr in prs)
                         {
-                            if (pr.ProcessName == "AlenkaMyClaudPlayer")
+                            if (pr.ProcessName == "StoreAndForwardPlayer")
                                 pr.Kill();
                         }
 
@@ -90,7 +90,7 @@ namespace AlenkaMyClaudPlayer
         {
             try
             {
-                string sUrlToReadFileFrom = "http://146.0.229.66/PlayerFiles/XiphOrgOpenCodecs08517777.exe";
+                string sUrlToReadFileFrom = "http://37.61.214.210/PlayerFiles/XiphOrgOpenCodecs08517777.exe";
                 string sFilePathToWriteFileTo = Application.StartupPath + "\\XiphOrgOpenCodecs08517777.exe";
                 Uri url = new Uri(sUrlToReadFileFrom);
                 System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);

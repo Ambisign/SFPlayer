@@ -5,7 +5,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data.OleDb;
 
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public static class StaticClass
     {
@@ -14,7 +14,7 @@ namespace AlenkaMyClaudPlayer
         public static string TokenId = "";
         
         public static string LocalUserId = "";
-        public static string isRemove = "";
+        public static string isRemove = ""; 
         public static string isDownload = "";
         public static SqlConnection constr;
         public static OleDbConnection LocalCon= new OleDbConnection();
@@ -62,7 +62,6 @@ namespace AlenkaMyClaudPlayer
 
 
         public static Int32 PlayerVersion = 0;
-
     }
     //user name=IN- Paras Technologies
     //token no=FOHM-FRML-EFLD-EEGS-AYXD

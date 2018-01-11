@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.ComponentModel;
 using System.Management.Instrumentation;
 
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public static class GenerateId
     {

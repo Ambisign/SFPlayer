@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Data.OleDb;
 using System.Diagnostics;
 using NetFwTypeLib;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     static class Program
     {
@@ -29,7 +29,7 @@ namespace AlenkaMyClaudPlayer
 
                 gblClass objMainClass = new gblClass();
 
-                StaticClass.constr = new SqlConnection("Data Source=85.195.82.94;database=dbSp;uid=sa;password=phoh7Aiheeki;Connect Timeout=5000");
+                StaticClass.constr = new SqlConnection("Data Source=85.195.82.94;database=MyClaud;uid=sa;password=phoh7Aiheeki;Connect Timeout=5000");
                 StaticClass.LocalCon.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\db.mdb;User Id=admin;Password=;";
                 string str = "";
                 string localCode = "";
@@ -42,7 +42,7 @@ namespace AlenkaMyClaudPlayer
 
                 string strOpt = "";
                 string proc = Process.GetCurrentProcess().ProcessName;
-                Process[] processes = Process.GetProcessesByName("AlenkaMyClaudPlayer");
+                Process[] processes = Process.GetProcessesByName("StoreAndForwardPlayer");
 
                 //                MessageBox.Show("First time " + processes.Length);
                 if (processes.Length > 1)
@@ -81,6 +81,7 @@ namespace AlenkaMyClaudPlayer
                         }
                     }
                     catch (Exception ex) { }
+
                     if (objMainClass.CheckForInternetConnection() == false)
                     {
                         StaticClass.TokenServiceId = 0;
@@ -142,7 +143,7 @@ namespace AlenkaMyClaudPlayer
                         }
                         if (ExpiryCopyrightStatus == "Yes")
                         {
-                            StaticClass.PlayerExpiryMessage="Your license has expired. Please contact our support team at " + StaticClass.MainwindowMessage;
+                            StaticClass.PlayerExpiryMessage = "Your license has expired. Please contact our support team at " + StaticClass.MainwindowMessage;
                             Application.SetCompatibleTextRenderingDefault(false);
                             Application.Run(new frmNet());
                             return;
@@ -150,12 +151,12 @@ namespace AlenkaMyClaudPlayer
 
                         if (ExpiryCopyrightStatus != "NoLic" && LeftCopyrightDays <= 10)
                         {
-                            StaticClass.PlayerExpiryMessage = Convert.ToString(LeftCopyrightDays) + " days left to renewal of subscription";
+                            StaticClass.PlayerExpiryMessage = Convert.ToString(LeftCopyrightDays) + " days left to renewal of subscription. Please contact our support team at " + StaticClass.MainwindowMessage +"";
                             StaticClass.IsCopyright = true;
                         }
                         else if (ExpiryCopyrightStatus != "NoLic" && LeftCopyrightDays == 0)
                         {
-                            StaticClass.PlayerExpiryMessage = "Last day to renewal of subscription";
+                            StaticClass.PlayerExpiryMessage = "Last day to renewal of subscription. Please contact our support team at " + StaticClass.MainwindowMessage + "";
                             StaticClass.IsCopyright = true;
                         }
                         else
@@ -169,7 +170,7 @@ namespace AlenkaMyClaudPlayer
                             Application.Run(new frmNet());
                             return;
                         }
-                        
+                         
                         else if (ExpiryCopyrightStatus == "NoLic")
                         {
                             StaticClass.PlayerExpiryMessage = "You do not have license. Please contact our support team at " + StaticClass.MainwindowMessage;
@@ -191,17 +192,17 @@ namespace AlenkaMyClaudPlayer
                         {
                             localCode = GenerateId.getKey(GenerateId._wvpaudi);
                         }
-                        catch (Exception ex) 
+                        catch (Exception ex)
                         {
                             dbCode = textline;
                             localCode = textline;
                         }
-                        
+
 
                         if (dbCode == localCode)
                         {
                             StaticClass.dfClientId = ds.Tables[0].Rows[0]["ClientID"].ToString();
-                            
+
                             StaticClass.TokenId = ds.Tables[0].Rows[0]["TokenId"].ToString();
 
                             IsBlock = Convert.ToInt32(ds.Tables[0].Rows[0]["Is_Block"]);
@@ -219,7 +220,7 @@ namespace AlenkaMyClaudPlayer
                             }
                             //  Application.EnableVisualStyles();
                             Application.SetCompatibleTextRenderingDefault(false);
-                            
+
                             Application.Run(new Clientlogin());
                             return;
                         }

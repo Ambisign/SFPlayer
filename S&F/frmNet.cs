@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public partial class frmNet : Form
     {
@@ -23,15 +23,17 @@ namespace AlenkaMyClaudPlayer
         private void frmNet_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.more;
-            lblExperyMsg.Text = StaticClass.PlayerExpiryMessage;
+
+            lblExpiryMsg.Text= StaticClass.PlayerExpiryMessage; 
+
         }
 
-        private void frmNet_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void frmNet_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

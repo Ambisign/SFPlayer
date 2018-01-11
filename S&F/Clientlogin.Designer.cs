@@ -1,4 +1,4 @@
-﻿namespace AlenkaMyClaudPlayer
+﻿namespace StoreAndForwardPlayer
 {
     partial class Clientlogin
     {
@@ -38,14 +38,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLicensedName23 = new System.Windows.Forms.Label();
             this.btnExtra = new System.Windows.Forms.Button();
+            this.picEpidemic = new System.Windows.Forms.PictureBox();
             this.chkRemember = new System.Windows.Forms.CheckBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.picDealer = new System.Windows.Forms.PictureBox();
             this.timAutoStart = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblPlayerId = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picEpidemic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,12 +60,11 @@
             // 
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(576, 231);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(77, 38);
@@ -72,12 +78,11 @@
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(493, 231);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(77, 38);
@@ -91,7 +96,7 @@
             this.txtLoginPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.txtLoginPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLoginPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtLoginPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLoginPassword.ForeColor = System.Drawing.Color.White;
             this.txtLoginPassword.Location = new System.Drawing.Point(353, 197);
             this.txtLoginPassword.Name = "txtLoginPassword";
             this.txtLoginPassword.PasswordChar = '*';
@@ -105,7 +110,7 @@
             this.txtloginUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.txtloginUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtloginUserName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtloginUserName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtloginUserName.ForeColor = System.Drawing.Color.White;
             this.txtloginUserName.Location = new System.Drawing.Point(353, 164);
             this.txtloginUserName.Name = "txtloginUserName";
             this.txtloginUserName.Size = new System.Drawing.Size(300, 29);
@@ -117,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(261, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 21);
@@ -129,7 +134,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(261, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 21);
@@ -159,19 +164,72 @@
             this.btnExtra.Visible = false;
             this.btnExtra.Click += new System.EventHandler(this.btnExtra_Click);
             // 
+            // picEpidemic
+            // 
+            this.picEpidemic.BackColor = System.Drawing.Color.Transparent;
+            this.picEpidemic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picEpidemic.Image = ((System.Drawing.Image)(resources.GetObject("picEpidemic.Image")));
+            this.picEpidemic.Location = new System.Drawing.Point(28, 68);
+            this.picEpidemic.Name = "picEpidemic";
+            this.picEpidemic.Size = new System.Drawing.Size(97, 81);
+            this.picEpidemic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picEpidemic.TabIndex = 63;
+            this.picEpidemic.TabStop = false;
+            this.picEpidemic.Visible = false;
+            // 
             // chkRemember
             // 
             this.chkRemember.BackColor = System.Drawing.Color.Transparent;
             this.chkRemember.Checked = true;
             this.chkRemember.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkRemember.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.chkRemember.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkRemember.ForeColor = System.Drawing.Color.White;
             this.chkRemember.Location = new System.Drawing.Point(353, 231);
             this.chkRemember.Name = "chkRemember";
             this.chkRemember.Size = new System.Drawing.Size(131, 23);
             this.chkRemember.TabIndex = 64;
             this.chkRemember.Text = "Remember Me";
             this.chkRemember.UseVisualStyleBackColor = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(425, 456);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(500, 19);
+            this.lblName.TabIndex = 66;
+            this.lblName.Text = "Licenced by MYCLAUD for Cloudcasting, Manage your Media and S&&S Solutions";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblName.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(6, 456);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 19);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "Editor:- Paras Technologies";
+            this.label4.Visible = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // picDealer
+            // 
+            this.picDealer.BackColor = System.Drawing.Color.Transparent;
+            this.picDealer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picDealer.Location = new System.Drawing.Point(27, 286);
+            this.picDealer.Name = "picDealer";
+            this.picDealer.Size = new System.Drawing.Size(112, 101);
+            this.picDealer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDealer.TabIndex = 88;
+            this.picDealer.TabStop = false;
             // 
             // timAutoStart
             // 
@@ -219,8 +277,8 @@
             // lblError
             // 
             this.lblError.BackColor = System.Drawing.Color.Transparent;
-            this.lblError.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.lblError.ForeColor = System.Drawing.Color.Yellow;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(207, 302);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(516, 69);
@@ -242,12 +300,26 @@
             this.pictureBox2.TabIndex = 94;
             this.pictureBox2.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(626, 434);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(300, 19);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Alenka Media International Music Management";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Visible = false;
+            // 
             // lblPlayerId
             // 
             this.lblPlayerId.AutoSize = true;
             this.lblPlayerId.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerId.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.lblPlayerId.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPlayerId.ForeColor = System.Drawing.Color.White;
             this.lblPlayerId.Location = new System.Drawing.Point(762, 5);
             this.lblPlayerId.Name = "lblPlayerId";
             this.lblPlayerId.Size = new System.Drawing.Size(164, 19);
@@ -264,11 +336,16 @@
             this.ClientSize = new System.Drawing.Size(932, 480);
             this.Controls.Add(this.lblPlayerId);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picEpidemic);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblCurrentTime);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.picDealer);
             this.Controls.Add(this.lblLicensedName23);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.chkRemember);
             this.Controls.Add(this.btnExtra);
             this.Controls.Add(this.btnExit);
@@ -291,6 +368,8 @@
             this.Load += new System.EventHandler(this.Clientlogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Clientlogin_KeyDown);
             this.Move += new System.EventHandler(this.Clientlogin_Move);
+            ((System.ComponentModel.ISupportInitialize)(this.picEpidemic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,14 +385,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExtra;
+        private System.Windows.Forms.PictureBox picEpidemic;
         private System.Windows.Forms.CheckBox chkRemember;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblLicensedName23;
+        private System.Windows.Forms.PictureBox picDealer;
         private System.Windows.Forms.Timer timAutoStart;
         private System.Windows.Forms.Label lblCurrentTime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPlayerId;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace AlenkaMyClaudPlayer
+﻿namespace StoreAndForwardPlayer
 {
     partial class userlogin
     {
@@ -62,13 +62,12 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Location = new System.Drawing.Point(634, 303);
+            this.btnExit.Font = new System.Drawing.Font("Arial", 15F);
+            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnExit.Location = new System.Drawing.Point(634, 269);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(92, 38);
             this.btnExit.TabIndex = 28;
@@ -81,13 +80,12 @@
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(49)))), ((int)(((byte)(50)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLogin.Location = new System.Drawing.Point(536, 303);
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 15F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(536, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(92, 38);
             this.btnLogin.TabIndex = 27;
@@ -99,33 +97,33 @@
             // 
             this.txtTokenNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.txtTokenNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTokenNo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtTokenNo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTokenNo.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtTokenNo.ForeColor = System.Drawing.Color.White;
             this.txtTokenNo.Location = new System.Drawing.Point(321, 237);
             this.txtTokenNo.Name = "txtTokenNo";
-            this.txtTokenNo.Size = new System.Drawing.Size(405, 29);
+            this.txtTokenNo.Size = new System.Drawing.Size(405, 26);
             this.txtTokenNo.TabIndex = 26;
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(321, 205);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(405, 29);
+            this.txtUsername.Size = new System.Drawing.Size(405, 26);
             this.txtUsername.TabIndex = 25;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(204, 240);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 21);
+            this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 24;
             this.label2.Text = "Token No      :";
             // 
@@ -133,11 +131,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(204, 209);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 23;
             this.label1.Text = "User Name   :";
             // 
@@ -156,24 +154,26 @@
             // 
             this.txtDealerCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(176)))));
             this.txtDealerCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDealerCode.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtDealerCode.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDealerCode.Location = new System.Drawing.Point(321, 269);
+            this.txtDealerCode.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtDealerCode.ForeColor = System.Drawing.Color.White;
+            this.txtDealerCode.Location = new System.Drawing.Point(338, 404);
             this.txtDealerCode.Name = "txtDealerCode";
-            this.txtDealerCode.Size = new System.Drawing.Size(405, 29);
+            this.txtDealerCode.Size = new System.Drawing.Size(405, 26);
             this.txtDealerCode.TabIndex = 68;
+            this.txtDealerCode.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(204, 271);
+            this.label4.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(221, 406);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 21);
+            this.label4.Size = new System.Drawing.Size(111, 19);
             this.label4.TabIndex = 67;
             this.label4.Text = "Dealer Code :";
+            this.label4.Visible = false;
             // 
             // label9
             // 
@@ -207,7 +207,7 @@
             this.lblWait.ForeColor = System.Drawing.Color.Yellow;
             this.lblWait.Location = new System.Drawing.Point(193, 161);
             this.lblWait.Name = "lblWait";
-            this.lblWait.Size = new System.Drawing.Size(550, 41);
+            this.lblWait.Size = new System.Drawing.Size(550, 42);
             this.lblWait.TabIndex = 71;
             this.lblWait.Text = "Connecting Server . . .";
             this.lblWait.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

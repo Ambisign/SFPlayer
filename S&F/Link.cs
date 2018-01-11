@@ -6,7 +6,7 @@ using System.IO;
 using IWshRuntimeLibrary;
 
 using System.Windows.Forms;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
     public class Link
     {

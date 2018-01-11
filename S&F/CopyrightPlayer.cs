@@ -19,7 +19,7 @@ using System.Data.OleDb;
 using System.Drawing.Imaging;
 using NetFwTypeLib;
 using System.Globalization;
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
 
 
@@ -241,10 +241,6 @@ namespace AlenkaMyClaudPlayer
             dgLocalPlaylist.Columns["eTime"].Visible = false;
             dgLocalPlaylist.Columns["eTime"].ReadOnly = true;
 
-            dgLocalPlaylist.Columns.Add("splPlaylistId", "splPlaylistId");
-            dgLocalPlaylist.Columns["splPlaylistId"].Width = 0;
-            dgLocalPlaylist.Columns["splPlaylistId"].Visible = false;
-            dgLocalPlaylist.Columns["splPlaylistId"].ReadOnly = true;
         }
 
 
@@ -331,7 +327,7 @@ namespace AlenkaMyClaudPlayer
             mlsSql = mlsSql + " INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID )  ";
             mlsSql = mlsSql + " INNER JOIN Albums ON Titles.AlbumID = Albums.AlbumID ) ";
             mlsSql = mlsSql + " INNER JOIN Artists ON Titles.ArtistID = Artists.ArtistID ) ";
-            mlsSql = mlsSql + " where TitlesInPlaylists.PlaylistID=" + Convert.ToInt32(currentPlayRow) + "  ORDER BY Rnd((Titles.TitleID))";
+            mlsSql = mlsSql + " where TitlesInPlaylists.PlaylistID=" + Convert.ToInt32(currentPlayRow) + "   ORDER BY   Rnd(-(100000*Titles.TitleID)*Time())";
 
 
 
@@ -433,7 +429,10 @@ namespace AlenkaMyClaudPlayer
                     dgLocalPlaylist.Rows.Add();
                     dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells[0].Value = dtDetail.Rows[iCtr]["playlistId"];
 
-                    dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells[1].Value = dtDetail.Rows[iCtr]["name"];
+                    //strGetCount = "select Count(*) as Total from  TitlesInPlaylists where playlistId =" + dtDetail.Rows[iCtr]["playlistId"] + " ";
+                    //dtGetCount = ObjMainClass.fnFillDataTable_Local(strGetCount);
+
+                    dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells[1].Value = dtDetail.Rows[iCtr]["name"]  ;
                     dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells[2].Value = dtDetail.Rows[iCtr]["PlaylistDefault"];
 
                     strGetCount = "";
@@ -443,27 +442,25 @@ namespace AlenkaMyClaudPlayer
                     {
                         dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["sTime"].Value = dtGetCount.Rows[0]["StartTime"];
                         dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["eTime"].Value = dtGetCount.Rows[0]["EndTime"];
-                        dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["splPlaylistid"].Value = dtGetCount.Rows[0]["splPlaylistid"];
                     }
                     else
                     {
                         dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["sTime"].Value = "Nill";
                         dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["eTime"].Value = "Nill";
-                        dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells["splPlaylistid"].Value = "Nill";
                     }
 
                     dgLocalPlaylist.Rows[dgLocalPlaylist.Rows.Count - 1].Cells[2].Style.Font = new Font("Segoe UI", 10, System.Drawing.FontStyle.Regular);
 
-                    //if (ObjMainClass.CheckForInternetConnection() == true)
-                    //{
-                    //    if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
-                    //    StaticClass.constr.Open();
-                    //    SqlCommand cmd = new SqlCommand();
-                    //    cmd.Connection = StaticClass.constr;
-                    //    cmd.CommandText = "update Playlists set tokenid=" + StaticClass.TokenId + " where playlistid=" + dtDetail.Rows[iCtr]["playlistId"];
-                    //    cmd.ExecuteNonQuery();
-                    //    StaticClass.constr.Close();
-                    //}
+                    if (ObjMainClass.CheckForInternetConnection() == true)
+                    {
+                        if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
+                        StaticClass.constr.Open();
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = StaticClass.constr;
+                        cmd.CommandText = "update Playlists set tokenid=" + StaticClass.TokenId + " where playlistid=" + dtDetail.Rows[iCtr]["playlistId"];
+                        cmd.ExecuteNonQuery();
+                        StaticClass.constr.Close();
+                    }
 
                 }
                 foreach (DataGridViewRow row in dgLocalPlaylist.Rows)
@@ -566,7 +563,7 @@ namespace AlenkaMyClaudPlayer
                     Process[] prs = Process.GetProcesses();
                     foreach (Process pr in prs)
                     {
-                        if (pr.ProcessName == "AlenkaMyClaudPlayer")
+                        if (pr.ProcessName == "StoreAndForwardPlayer")
                             pr.Kill();
                     }
 
@@ -586,13 +583,13 @@ namespace AlenkaMyClaudPlayer
         protected void Show_Click(Object sender, System.EventArgs e)
         {
             this.Show();
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
         }
         private void mainwindow_Load(object sender, EventArgs e)
         {
             panAdvt.Visible = true;
             panAdvt.Location = new Point(-500, -500);
-          // button3.Visible = false;
+           // button3.Visible = false;
             if (StaticClass.IsLock == true)
             {
                 panMainPlaylist.Visible = false;
@@ -623,7 +620,7 @@ namespace AlenkaMyClaudPlayer
             m_notifyicon.Visible = true;
             m_notifyicon.Icon = new System.Drawing.Icon(Application.StartupPath + @"\MyA.ico");
             m_notifyicon.ContextMenu = m_menu;
-            m_notifyicon.ShowBalloonTip(10, "Now payer is online", "Running", ToolTipIcon.Info);
+            m_notifyicon.ShowBalloonTip(10, "Now player is online", "Running", ToolTipIcon.Info);
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
 
@@ -758,7 +755,7 @@ namespace AlenkaMyClaudPlayer
 
                 //panel2.Visible = false;
                 //panPlaylist.Height = 550; tbpNewest300  tbpBestof
-                if (StaticClass.PlayerExpiryMessage == "")
+                if (StaticClass.PlayerExpiryMessage=="")
                 {
                     this.Text = StaticClass.MainwindowMessage;
                 }
@@ -766,6 +763,8 @@ namespace AlenkaMyClaudPlayer
                 {
                     this.Text = StaticClass.PlayerExpiryMessage;
                 }
+                
+
                 GetAdvtPlayingType();
                 StaticClass.PlayerClosingTime = "";
                 IsFormatFirstTimeLoad = "Yes";
@@ -776,8 +775,6 @@ namespace AlenkaMyClaudPlayer
             }
             else
             {
-
-
                 if (StaticClass.PlayerExpiryMessage == "")
                 {
                     this.Text = StaticClass.MainwindowMessage;
@@ -786,8 +783,6 @@ namespace AlenkaMyClaudPlayer
                 {
                     this.Text = StaticClass.PlayerExpiryMessage;
                 }
-
-
                 GetAdvertisement();
                 delete_temp_table();
                 DeleteHideSongs();
@@ -870,11 +865,6 @@ namespace AlenkaMyClaudPlayer
             MainDirectory = Application.StartupPath + "\\db.ldb";
             DirectoryInfo DifDl = new DirectoryInfo(MainDirectory);
             DifDl.Attributes = FileAttributes.Hidden;
-
-
-
-            GetSeparationDetail();
-            timSeparation.Enabled = true;
 
         }
 
@@ -1225,7 +1215,7 @@ namespace AlenkaMyClaudPlayer
                 if (ds.Tables[0].Rows.Count <= 0)
                 {
 
-                    sQr = "select TitleID,AlbumID,ArtistID,Title,Gain,isnull(TitleYear,0) as TitleYear,Time,Titles.AlenkaGenreId as GenreId from Titles where TitleID=" + song_id;
+                    sQr = "select TitleID,AlbumID,ArtistID,Title,Gain,isnull(TitleYear,0) as TitleYear,Time from Titles where TitleID=" + song_id;
                     DataSet dsTitle = new DataSet();
                     dsTitle = ObjMainClass.fnFillDataSet(sQr);
                     AlbumID = Convert.ToInt32(dsTitle.Tables[0].Rows[0]["AlbumID"]);
@@ -1236,7 +1226,7 @@ namespace AlenkaMyClaudPlayer
                     sWr = "insert into Titles values (" + Convert.ToInt32(dsTitle.Tables[0].Rows[0]["TitleID"]) + " , " + Convert.ToInt32(dsTitle.Tables[0].Rows[0]["AlbumID"]) + " , ";
                     sWr = sWr + Convert.ToInt32(dsTitle.Tables[0].Rows[0]["ArtistID"]) + ", '" + Special_Change + "' , ";
                     sWr = sWr + "'" + dsTitle.Tables[0].Rows[0]["Gain"] + "' , '" + dsTitle.Tables[0].Rows[0]["Time"] + "' ,";
-                    sWr = sWr + Convert.ToInt32(dsTitle.Tables[0].Rows[0]["TitleYear"]) + "," + dsTitle.Tables[0].Rows[0]["GenreId"] + ")";
+                    sWr = sWr + Convert.ToInt32(dsTitle.Tables[0].Rows[0]["TitleYear"]) + ")";
                     OleDbCommand cmdTitle = new OleDbCommand();
                     cmdTitle.Connection = StaticClass.LocalCon;
                     cmdTitle.CommandText = sWr;
@@ -1579,16 +1569,16 @@ namespace AlenkaMyClaudPlayer
             if (dgPlaylist.Rows.Count == 0)
             {
                 IsLast100Working = "No";
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
 
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHTE:
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHTE:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -1653,16 +1643,16 @@ namespace AlenkaMyClaudPlayer
             if (dgPlaylist.Rows.Count - 1 == 0)
             {
                 IsLast100Working = "No";
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
 
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHT:
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHT:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -1719,7 +1709,7 @@ namespace AlenkaMyClaudPlayer
 
 
 
-        gg:
+            gg:
             if (CurrentRow == dgPlaylist.Rows.Count - 1)
             {
                 if (IsDrop_Song == false)
@@ -1912,7 +1902,7 @@ namespace AlenkaMyClaudPlayer
                         dgOtherPlaylist.Visible = false;
                         if (StaticClass.IsStore == true)
                         {
-                            PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[e.RowIndex].Cells[0].Value), Query);
+                            PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[e.RowIndex].Cells[0].Value));
                         }
                         else
                         {
@@ -2432,15 +2422,15 @@ namespace AlenkaMyClaudPlayer
             if (dgPlaylist.Rows.Count == 0)
             {
                 IsLast100Working = "No";
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHTE:
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHTE:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -2507,16 +2497,16 @@ namespace AlenkaMyClaudPlayer
             if (dgPlaylist.Rows.Count - 1 == 0)
             {
                 IsLast100Working = "No";
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
 
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHT:
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHT:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -2581,7 +2571,7 @@ namespace AlenkaMyClaudPlayer
             }
 
 
-        gg:
+            gg:
             if (CurrentRow == dgPlaylist.Rows.Count - 1)
             {
                 if (IsDrop_Song == false)
@@ -3037,88 +3027,54 @@ namespace AlenkaMyClaudPlayer
             }
         }
 
-        private void GetNextSong()
+        private void GetNextSong(string RunningPlayer)
         {
-            try
+            string currentFileName;
+            if (RunningPlayer == "1")
             {
-
-
-                int dgRowIndex = 0;
-                string st = "";
-                st = "select top 10 * from tblast100 order by srno desc";
-                DataTable dtl = new DataTable();
-
-                if (IsSongDropAdvt == false)
+                currentFileName = MusicPlayer2CurrentSongId.ToString();
+                for (int i = 0; i < dgPlaylist.Rows.Count; i++)
                 {
-                    GetCurrentRow();
-                clAg:
-                    if (IsVisibleSong == true)
+                    if (currentFileName == dgPlaylist.Rows[i].Cells[0].Value.ToString())
                     {
-                        if (LastRowId == dgPlaylist.Rows.Count - 1)
-                        {
-                            dgRowIndex = 0;
-                        }
-                        else
-                        {
-                            dgRowIndex = LastRowId + 1;
-                        }
-                    }
-                    else if (CurrentRow >= dgPlaylist.Rows.Count - 1)
-                    {
-                        if (LastRowId + 1 >= dgPlaylist.Rows.Count - 1)
-                        {
-                            dgRowIndex = 0;
-                        }
-                        else
-                        {
-                            dgRowIndex = LastRowId + 1;
-                        }
-                    }
-                    else
-                    {
+                        CurrentRow = i;
                         if (CurrentRow == dgPlaylist.Rows.Count - 1)
                         {
-                            dgRowIndex = 0;
+                            NextSongDisplay2(dgPlaylist.Rows[Convert.ToInt32(0)].Cells[0].Value.ToString());
                         }
                         else
                         {
-                            dgRowIndex = CurrentRow + 1;
-
+                            NextSongDisplay2(dgPlaylist.Rows[Convert.ToInt32(CurrentRow + 1)].Cells[0].Value.ToString());
                         }
-                    }
-                     
-
-                    dtl = ObjMainClass.fnFillDataTable_Local(st);
-                    if (dtl.Rows.Count > 0)
-                    {
-                        for (int i = 0; i < dtl.Rows.Count; i++)
-                        {
-                            if (dtl.Rows[i]["TitleId"].ToString() == dgPlaylist.Rows[dgRowIndex].Cells[0].Value.ToString())
-                            {
-                               
-                                dgPlaylist.Rows.RemoveAt(dgRowIndex);
-                                goto clAg;
-                            }
-                        }
-                    }
-
-
-                    if (musicPlayer1.URL == "")
-                    {
-                        NextSongDisplay2(dgPlaylist.Rows[dgRowIndex].Cells[0].Value.ToString());
-                    }
-                    else if (musicPlayer2.URL == "")
-                    {
-                        NextSongDisplay(dgPlaylist.Rows[dgRowIndex].Cells[0].Value.ToString());
+                        return;
                     }
                 }
             }
-            catch (Exception ex)
+            else if (RunningPlayer == "2")
             {
-                Console.WriteLine(ex.Message);
+                currentFileName = MusicPlayer1CurrentSongId.ToString();
+                for (int i = 0; i < dgPlaylist.Rows.Count; i++)
+                {
+                    if (currentFileName == dgPlaylist.Rows[i].Cells[0].Value.ToString())
+                    {
+                        CurrentRow = i;
+                        if (CurrentRow == dgPlaylist.Rows.Count - 1)
+                        {
+                            NextSongDisplay(dgPlaylist.Rows[Convert.ToInt32(0)].Cells[0].Value.ToString());
+                        }
+                        else
+                        {
+                            NextSongDisplay(dgPlaylist.Rows[Convert.ToInt32(CurrentRow + 1)].Cells[0].Value.ToString());
+                        }
+                        return;
+                    }
+                }
+
             }
 
         }
+
+
 
 
         private void Song_Clear_foucs()
@@ -3771,15 +3727,15 @@ namespace AlenkaMyClaudPlayer
             }
             if (dgPlaylist.Rows.Count == 0)
             {
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHTE:
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHTE:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -3838,15 +3794,15 @@ namespace AlenkaMyClaudPlayer
 
             if (dgPlaylist.Rows.Count - 1 == 0)
             {
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHT:
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHT:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -3903,7 +3859,7 @@ namespace AlenkaMyClaudPlayer
 
 
 
-        gg:
+            gg:
             if (CurrentRow == dgPlaylist.Rows.Count - 1)
             {
                 if (IsDrop_Song == false)
@@ -4382,16 +4338,16 @@ namespace AlenkaMyClaudPlayer
             }
             if (dgPlaylist.Rows.Count == 0)
             {
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
 
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHTE:
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHTE:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -4447,16 +4403,16 @@ namespace AlenkaMyClaudPlayer
 
             if (dgPlaylist.Rows.Count - 1 == 0)
             {
-            //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
-            //{
-            //    CurrentPlaylistRow = 0;
+                //if (CurrentPlaylistRow == dgLocalPlaylist.Rows.Count - 1)
+                //{
+                //    CurrentPlaylistRow = 0;
 
-            //}
-            //else
-            //{
-            //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
-            //}
-            GHT:
+                //}
+                //else
+                //{
+                //    CurrentPlaylistRow = CurrentPlaylistRow + 1;
+                //}
+                GHT:
                 for (int i = Convert.ToInt16(CurrentPlaylistRow); i < dgLocalPlaylist.Rows.Count; i++)
                 {
                     mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + StaticClass.DefaultPlaylistId;
@@ -4511,7 +4467,7 @@ namespace AlenkaMyClaudPlayer
 
 
 
-        gg:
+            gg:
             if (CurrentRow == dgPlaylist.Rows.Count - 1)
             {
                 if (IsDrop_Song == false)
@@ -5331,13 +5287,13 @@ namespace AlenkaMyClaudPlayer
             if (musicPlayer1.URL != "")
             {
                 double t = Math.Floor(musicPlayer1.currentMedia.duration);
-                CurrrentPos = (Convert.ToInt32(t) - 25);
+                CurrrentPos = (Convert.ToInt32(t) - 23);
                 musicPlayer1.Ctlcontrols.currentPosition = CurrrentPos;
             }
             if (musicPlayer2.URL != "")
             {
                 double t = Math.Floor(musicPlayer2.currentMedia.duration);
-                CurrrentPos = (Convert.ToInt32(t) - 25);
+                CurrrentPos = (Convert.ToInt32(t) - 23);
                 musicPlayer2.Ctlcontrols.currentPosition = CurrrentPos;
             }
         }
@@ -10926,7 +10882,7 @@ namespace AlenkaMyClaudPlayer
             {
                 goto OutQ;
             }
-        OutQ:
+            OutQ:
             strInsert = "";
             lPath = "";
             strInsert = "delete from tbAdvertisement ";
@@ -11070,7 +11026,7 @@ namespace AlenkaMyClaudPlayer
         string SplSongName = "";
         private void timGetSplPlaylist_Tick(object sender, EventArgs e)
         {
-        upAgain:
+            upAgain:
             FirstTimeSong = true;
             //sTime = 1;
             DataTable dtDetailNew = new DataTable();
@@ -11141,14 +11097,6 @@ namespace AlenkaMyClaudPlayer
                 dtDetailNew = ObjMainClass.fnFillDataTable(strNew);
                 if ((dtDetailNew.Rows.Count > 0))
                 {
-                   string st = "";
-                    st = "update AMPlayerTokens set IsPublishUpdate=1 where  tokenid=" + StaticClass.TokenId + "";
-                    if (StaticClass.constr.State == ConnectionState.Closed) StaticClass.constr.Open();
-                    SqlCommand cmdLog = new SqlCommand();
-                    cmdLog.Connection = StaticClass.constr;
-                    cmdLog.CommandText = st;
-                    cmdLog.ExecuteNonQuery();
-
                     #region Delete Songs
                     for (int iDel = 0; (iDel <= (dtDetailNew.Rows.Count - 1)); iDel++)
                     {
@@ -11346,11 +11294,10 @@ namespace AlenkaMyClaudPlayer
                                 Special_Change = Special_Name.Replace("'", "??$$$??");
 
                                 strInsert = "";
-                                strInsert = "insert into tbSpecialPlaylists_Titles (SchId,titleId,isDownload,Title,AlbumID,ArtistID,[Time],arName,alName,tYear,genreId) values(" + LocalpSchId;
+                                strInsert = "insert into tbSpecialPlaylists_Titles values(" + LocalpSchId;
                                 strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iW]["titleId"]) + ", " + IsLocalSplSong + ",'" + dtDetail.Rows[iW]["title"].ToString().Replace("'", "??$$$??") + "', ";
                                 strInsert = strInsert + " " + Convert.ToInt32(dtDetail.Rows[iW]["AlbumID"]) + "," + Convert.ToInt32(dtDetail.Rows[iW]["ArtistID"]) + " ,";
-                                strInsert = strInsert + " '" + dtDetail.Rows[iW]["Time"] + "','" + dtDetail.Rows[iW]["arName"].ToString().Replace("'", "??$$$??") + "','" + dtDetail.Rows[iW]["aName"].ToString().Replace("'", "??$$$??") + "' , ";
-                                strInsert = strInsert + " " + dtDetail.Rows[iW]["tYear"] + "," + dtDetail.Rows[iW]["genreId"] + " )";
+                                strInsert = strInsert + " '" + dtDetail.Rows[iW]["Time"] + "','" + dtDetail.Rows[iW]["arName"].ToString().Replace("'", "??$$$??") + "','" + dtDetail.Rows[iW]["aName"].ToString().Replace("'", "??$$$??") + "')";
                                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                                 OleDbCommand cmdTitle = new OleDbCommand();
                                 cmdTitle.Connection = StaticClass.LocalCon;
@@ -11585,7 +11532,7 @@ namespace AlenkaMyClaudPlayer
                                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                                 sWr = "insert into Titles values (" + Convert.ToInt32(dsMain.Tables[0].Rows[i]["TitleID"]) + " , " + Convert.ToInt32(dsMain.Tables[0].Rows[i]["AlbumID"]) + " , ";
                                 sWr = sWr + Convert.ToInt32(dsMain.Tables[0].Rows[i]["ArtistID"]) + ", '" + Special_Change + "' , ";
-                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ," + dsMain.Tables[0].Rows[i]["tYear"] + "," + dsMain.Tables[0].Rows[i]["GenreId"] + ")";
+                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ,0)";
                                 OleDbCommand cmdTitle = new OleDbCommand();
                                 cmdTitle.Connection = StaticClass.LocalCon;
                                 cmdTitle.CommandText = sWr;
@@ -11683,7 +11630,7 @@ namespace AlenkaMyClaudPlayer
                                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                                 sWr = "insert into Titles values (" + Convert.ToInt32(dsMain.Tables[0].Rows[i]["TitleID"]) + " , " + Convert.ToInt32(dsMain.Tables[0].Rows[i]["AlbumID"]) + " , ";
                                 sWr = sWr + Convert.ToInt32(dsMain.Tables[0].Rows[i]["ArtistID"]) + ", '" + Special_Change + "' , ";
-                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ," + dsMain.Tables[0].Rows[i]["tYear"] + "," + dsMain.Tables[0].Rows[i]["GenreId"] + " )";
+                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ,0)";
                                 OleDbCommand cmdTitle = new OleDbCommand();
                                 cmdTitle.Connection = StaticClass.LocalCon;
                                 cmdTitle.CommandText = sWr;
@@ -11789,7 +11736,7 @@ namespace AlenkaMyClaudPlayer
             FillLocalPlaylist();
             if (dgLocalPlaylist.Rows.Count >= 0)
             {
-                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[0].Cells["playlistId"].Value), Query);
+                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[0].Cells["playlistId"].Value));
             }
             if (timGetSplPlaylistScheduleTime.Enabled == false)
             {
@@ -11800,7 +11747,7 @@ namespace AlenkaMyClaudPlayer
         }
 
 
-
+        
 
 
         private void InitilizeSplGrid()
@@ -11843,7 +11790,7 @@ namespace AlenkaMyClaudPlayer
             Stream streamRemote = null;
             Stream streamLocal = null;
 
-            String RemoteFtpPath = "http://146.0.229.66/mp3files/" + SplSongName + ".mp3";
+            String RemoteFtpPath = "http://85.195.82.94/mp3files/" + SplSongName + ".mp3";
             String LocalDestinationPath = Application.StartupPath + "\\so\\" + SplSongName + ".mp3";
             try
             {
@@ -12049,7 +11996,7 @@ namespace AlenkaMyClaudPlayer
                                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                                 sWr = "insert into Titles values (" + Convert.ToInt32(dsMain.Tables[0].Rows[i]["TitleID"]) + " , " + Convert.ToInt32(dsMain.Tables[0].Rows[i]["AlbumID"]) + " , ";
                                 sWr = sWr + Convert.ToInt32(dsMain.Tables[0].Rows[i]["ArtistID"]) + ", '" + Special_Change + "' , ";
-                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ," + dsMain.Tables[0].Rows[i]["tYear"] + "," + dsMain.Tables[0].Rows[i]["GenreId"] + " )";
+                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ,0)";
                                 OleDbCommand cmdTitle = new OleDbCommand();
                                 cmdTitle.Connection = StaticClass.LocalCon;
                                 cmdTitle.CommandText = sWr;
@@ -12117,7 +12064,7 @@ namespace AlenkaMyClaudPlayer
                     FillLocalPlaylist();
                     if (dgLocalPlaylist.Rows.Count >= 0)
                     {
-                        PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[0].Cells["playlistId"].Value), Query);
+                        PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[0].Cells["playlistId"].Value));
                     }
                     if (timGetSplPlaylistScheduleTime.Enabled == false)
                     {
@@ -12155,7 +12102,7 @@ namespace AlenkaMyClaudPlayer
                                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                                 sWr = "insert into Titles values (" + Convert.ToInt32(dsMain.Tables[0].Rows[i]["TitleID"]) + " , " + Convert.ToInt32(dsMain.Tables[0].Rows[i]["AlbumID"]) + " , ";
                                 sWr = sWr + Convert.ToInt32(dsMain.Tables[0].Rows[i]["ArtistID"]) + ", '" + Special_Change + "' , ";
-                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ," + dsMain.Tables[0].Rows[i]["tYear"] + " ," + dsMain.Tables[0].Rows[i]["GenreId"] + " )";
+                                sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[i]["Time"] + "' ,0)";
                                 OleDbCommand cmdTitle = new OleDbCommand();
                                 cmdTitle.Connection = StaticClass.LocalCon;
                                 cmdTitle.CommandText = sWr;
@@ -12308,7 +12255,7 @@ namespace AlenkaMyClaudPlayer
             {
                 FirstTimeConditation = "Yes";
                 PlaylistTime = "";
-                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[dgLocalPlaylist.CurrentCell.RowIndex].Cells[0].Value), Query);
+                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[dgLocalPlaylist.CurrentCell.RowIndex].Cells[0].Value));
                 if (timGetSplPlaylistScheduleTime.Enabled == false)
                 {
                     timGetSplPlaylistScheduleTime.Enabled = true;
@@ -12522,7 +12469,7 @@ namespace AlenkaMyClaudPlayer
             //            string[] arr = strGetName.Split('(');
             //            dgLocalPlaylist.Rows[iCtr].Cells[1].Value = arr[0].Trim() + "  (" + dtDetailNew.Rows[0]["Total"] + ")";
             //        }
-                    
+                     
             //    }
             //}
 
@@ -12625,10 +12572,10 @@ namespace AlenkaMyClaudPlayer
                                     IsFormatFirstTimeLoad = "No";
                                     for (int i = 0; i < dgLocalPlaylist.Rows.Count; i++)
                                     {
-
+                                       
                                         if (Convert.ToInt32(dgLocalPlaylist.Rows[i].Cells["playlistId"].Value) == Convert.ToInt32(dgLocalPlaylist.Rows[iRow].Cells["playlistId"].Value))
                                         {
-
+                                            
 
                                             dgLocalPlaylist.Rows[i].Cells[2].Value = "Default";
 
@@ -12712,7 +12659,7 @@ namespace AlenkaMyClaudPlayer
 
         private void timStartPlaylistSchedule_Tick(object sender, EventArgs e)
         {
-        RunAg:
+            RunAg:
             if (StaticClass.IsPlayerClose == "Yes") return;
             if (StartPlaylist != 0)
             {
@@ -12736,7 +12683,7 @@ namespace AlenkaMyClaudPlayer
                 #region Running Playlist
 
                 dgLocalPlaylist.Rows[PlaylistRow].Selected = true;
-                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[PlaylistRow].Cells["playlistId"].Value), Query);
+                PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[PlaylistRow].Cells["playlistId"].Value));
 
 
 
@@ -12757,7 +12704,7 @@ namespace AlenkaMyClaudPlayer
 
             }
         }
-        private void PopulateSplPlaylist(DataGridView dgGrid, Int32 currentPlayRow, string Query)
+        private void PopulateSplPlaylist(DataGridView dgGrid, Int32 currentPlayRow)
         {
             try
             {
@@ -12776,7 +12723,7 @@ namespace AlenkaMyClaudPlayer
                 mlsSql = mlsSql + " INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID )  ";
                 mlsSql = mlsSql + " INNER JOIN Albums ON Titles.AlbumID = Albums.AlbumID ) ";
                 mlsSql = mlsSql + " INNER JOIN Artists ON Titles.ArtistID = Artists.ArtistID ) ";
-                mlsSql = mlsSql + " where TitlesInPlaylists.PlaylistID=" + Convert.ToInt32(currentPlayRow) + " " + Query + "  ORDER BY Rnd((Titles.TitleID))";
+                mlsSql = mlsSql + " where TitlesInPlaylists.PlaylistID=" + Convert.ToInt32(currentPlayRow) + "   ORDER BY   Rnd(-(100000*Titles.TitleID)*Time())";
 
 
                 dtDetail = ObjMainClass.fnFillDataTable_Local(mlsSql);
@@ -12988,7 +12935,7 @@ namespace AlenkaMyClaudPlayer
                             if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                             sWr = "insert into Titles values (" + Convert.ToInt32(dsMain.Tables[0].Rows[iSo]["TitleID"]) + " , " + Convert.ToInt32(dsMain.Tables[0].Rows[iSo]["AlbumID"]) + " , ";
                             sWr = sWr + Convert.ToInt32(dsMain.Tables[0].Rows[iSo]["ArtistID"]) + ", '" + Special_Change + "' , ";
-                            sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[iSo]["Time"] + "' ," + dsMain.Tables[0].Rows[iSo]["tYear"] + " ," + dsMain.Tables[0].Rows[iSo]["GenreId"] + " )";
+                            sWr = sWr + " '0' , '" + dsMain.Tables[0].Rows[iSo]["Time"] + "' ,0)";
                             OleDbCommand cmdTitle = new OleDbCommand();
                             cmdTitle.Connection = StaticClass.LocalCon;
                             cmdTitle.CommandText = sWr;
@@ -13063,7 +13010,7 @@ namespace AlenkaMyClaudPlayer
                     Stream streamRemote = null;
                     Stream streamLocal = null;
 
-                    String RemoteFtpPath = "http://146.0.229.66/mp3files/" + dsDownload.Tables[0].Rows[0]["titleId"] + ".mp3";
+                    String RemoteFtpPath = "http://85.195.82.94/mp3files/" + dsDownload.Tables[0].Rows[0]["titleId"] + ".mp3";
                     String LocalDestinationPath = Application.StartupPath + "\\so\\" + dsDownload.Tables[0].Rows[0]["titleId"] + ".mp3";
                     // MessageBox.Show(dsDownload.Tables[0].Rows[0]["titleId"].ToString());
                     EventSongId = dsDownload.Tables[0].Rows[0]["titleId"].ToString();
@@ -13411,10 +13358,10 @@ namespace AlenkaMyClaudPlayer
         string PrayerTime = "";
         string IsPrayerRunning = "No";
         double pVolume = 100;
-
+         
         private void timPrayer_Tick(object sender, EventArgs e)
         {
-
+            
             if (StaticClass.IsPlayerClose == "Yes")
             {
                 return;
@@ -13428,7 +13375,7 @@ namespace AlenkaMyClaudPlayer
             if (PrayerTime != string.Format(fi, "{0:hh:mm tt}", DateTime.Now))
             {
                 PrayerTime = string.Format(fi, "{0:hh:mm tt}", DateTime.Now);
-
+                
 
                 for (int iRow = 0; iRow < dgPrayer.Rows.Count; iRow++)
                 {
@@ -13745,7 +13692,7 @@ namespace AlenkaMyClaudPlayer
                 //this.Show();
                 //this.WindowState = FormWindowState.Minimized;
                 //          m_notifyicon.Dispose();
-                //Process.Start(Application.StartupPath+ "\\AlenkaMyClaudPlayer.exe");
+                //Process.Start(Application.StartupPath+ "\\StoreAndForwardPlayer.exe");
                 //AdvtTime = 0;
                 //timRefershData.Enabled = false;
                 //IsExitApp = "Yes";
@@ -13810,7 +13757,7 @@ namespace AlenkaMyClaudPlayer
 
                 if (ObjMainClass.CheckForInternetConnection() == true)
                 {
-                    GetSeparationDetail();
+
                     UploadPlayerStatus();
                     // GetEvents();
                     if (lblSongCount.Text == "2")
@@ -13833,7 +13780,6 @@ namespace AlenkaMyClaudPlayer
 
                     GetPrayer();
 
-
                     if (StaticClass.IsStore == true)
                     {
                         if (CrDate != string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date))
@@ -13842,30 +13788,7 @@ namespace AlenkaMyClaudPlayer
                             IsUpdateFind = "No";
                             bgUpdatedExeDownload.RunWorkerAsync();
                         }
-                        else
-                        {
-                            if (ObjMainClass.CheckForInternetConnection() == true)
-                            {
-                                string st = "select * from AMPlayerTokens where tokenid=" + StaticClass.TokenId + " and IsPublishUpdate=0";
-                                DataTable dtU = new DataTable();
-                                dtU = ObjMainClass.fnFillDataTable(st);
-                                if (dtU.Rows.Count > 0)
-                                {
-                                    //st = "";
-                                    //st = "update AMPlayerTokens set IsPublishUpdate=1 where  tokenid=" + StaticClass.TokenId + "";
-                                    //if (StaticClass.constr.State == ConnectionState.Closed) StaticClass.constr.Open();
-                                    //SqlCommand cmdLog = new SqlCommand();
-                                    //cmdLog.Connection = StaticClass.constr;
-                                    //cmdLog.CommandText = st;
-                                    //cmdLog.ExecuteNonQuery();
-                                    sTime = 1;
-                                    timGetSplPlaylist.Enabled = true;
-                                }
-                            }
-
-
-                        }
-
+                         
                     }
                 }
             }
@@ -13873,7 +13796,7 @@ namespace AlenkaMyClaudPlayer
         private void GetPrayer()
         {
             DataTable dtDetail = new DataTable();
-            string str = "spGetPrayerData " + DateTime.Now.Date.Month + " ," + StaticClass.AdvtCityId + "," + StaticClass.CountryId + ", " + StaticClass.Stateid + ", " + StaticClass.TokenId;
+           string str = "spGetPrayerData " + DateTime.Now.Date.Month + " ," + StaticClass.AdvtCityId + "," + StaticClass.CountryId + ", " + StaticClass.Stateid + ", " + StaticClass.TokenId;
             dtDetail = ObjMainClass.fnFillDataTable(str);
             if ((dtDetail.Rows.Count > 0))
             {
@@ -13927,16 +13850,16 @@ namespace AlenkaMyClaudPlayer
                     UpdateVersion = Convert.ToInt32(dtUpdateVersion.Rows[0]["UpdateId"]);
                     VersionAvailbleDate = Convert.ToDateTime(dtUpdateVersion.Rows[0]["AviableDate"]);
                     FileLocation = dtUpdateVersion.Rows[0]["FileLocation"].ToString();
-                    VersionApplicationPath = Application.StartupPath + "\\UpdateAlenkaMyClaudPlayer.exe";
+                    VersionApplicationPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
                     if (StaticClass.PlayerVersion < UpdateVersion)
                     {
                         IsUpdateFind = "Yes";
                         #region Update
-                        string localPath = Application.StartupPath + "\\UpdateAlenkaMyClaudPlayer.exe";
-                        string UpdateFileLocation = "ftp://146.0.229.66:21/NativePlayer/Copyright/UpdateAlenkaMyClaudPlayer.exe";
+                        string localPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
+                        string UpdateFileLocation = "ftp://85.195.82.94:21/NativePlayer/Copyright/UpdateStoreAndForwardPlayer.exe";
 
                         requestFileDownload = (FtpWebRequest)WebRequest.Create(UpdateFileLocation);
-                        requestFileDownload.Credentials = new NetworkCredential("FtpParas", "moh!@#123");
+                        requestFileDownload.Credentials = new NetworkCredential("harish", "Mohali123");
                         requestFileDownload.KeepAlive = true;
                         requestFileDownload.UseBinary = true;
                         requestFileDownload.UsePassive = false;
@@ -14012,13 +13935,13 @@ namespace AlenkaMyClaudPlayer
                 {
                     goto Close;
                 }
-            Close:
+                Close:
                 m_notifyicon.Dispose();
                 System.Diagnostics.Process.Start(VersionApplicationPath);
                 Process[] prs = Process.GetProcesses();
                 foreach (Process pr in prs)
                 {
-                    if (pr.ProcessName == "AlenkaMyClaudPlayer")
+                    if (pr.ProcessName == "StoreAndForwardPlayer")
                         pr.Kill();
                 }
                 return;
@@ -14209,401 +14132,6 @@ namespace AlenkaMyClaudPlayer
             panPrayerTime.Visible = false;
         }
 
-        private void UpdateTitleYear()
-        {
-            DataTable dtDetailNew = new DataTable();
-            string up = "";
-
-            up = "select * from tbSpecialPlaylists_Titles";
-            dtDetailNew = ObjMainClass.fnFillDataTable_Local(up);
-            if ((dtDetailNew.Rows.Count > 0))
-            {
-                for (int i = 0; i < dtDetailNew.Rows.Count; i++)
-                {
-                    up = "";
-                    up = "update titles set titleyear='" + dtDetailNew.Rows[i]["tyear"] + "' where titleid=" + dtDetailNew.Rows[i]["titleid"] + "";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdTitle = new OleDbCommand();
-                    cmdTitle.Connection = StaticClass.LocalCon;
-                    cmdTitle.CommandText = up;
-                    cmdTitle.ExecuteNonQuery();
-                }
-            }
-        }
-
-
-
-
-        string SearchCurrentSongId = "";
-        string Query = "";
-        private void Separation()
-        {
-            string currentSongId = "";
-            string sp = "";
-            string splIdPlaylist = "";
-            splIdPlaylist = dgLocalPlaylist.Rows[StaticClass.DefaultPlaylistCurrentRow].Cells["splPlaylistid"].Value.ToString();
-            Query = " and 1=1";
-            string Up = "";
-            try
-            {
-
-                if ((musicPlayer1.URL != "") && (musicPlayer2.URL != ""))
-                {
-                    return;
-                }
-                if (musicPlayer1.URL != "")
-                {
-                    currentSongId = MusicPlayer1CurrentSongId.ToString();
-                }
-                if (musicPlayer2.URL != "")
-                {
-                    currentSongId = MusicPlayer2CurrentSongId.ToString();
-                }
-                sp = "SELECT * from titles where titleid=" + currentSongId + "";
-                DataTable dtTitleDetail = new DataTable();
-                dtTitleDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtTitleDetail.Rows.Count <= 0)
-                {
-                    return;
-                }
-
-
-
-                /// Remove Saved Separation which is complete block length
-                sp = "";
-                sp = "select * from tbSeparationBlock where  splplaylistid= " + splIdPlaylist + " order by sType";
-                DataTable dtSpBlock = new DataTable();
-                dtSpBlock = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpBlock.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dtSpBlock.Rows.Count; i++)
-                    {
-                        SetBlockLength(dtSpBlock.Rows[i]["sBlockType"].ToString(), dtSpBlock.Rows[i]["BlockLength"].ToString(), dtSpBlock.Rows[i]["sid"].ToString(), dtSpBlock.Rows[i]["stype"].ToString(), splIdPlaylist);
-                    }
-                }
-
-
-
-
-
-
-
-
-
-
-
-                sp = "select * from tbSeparation where stype='Title' and splplaylistid= " + splIdPlaylist;
-                DataTable dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    splExecuteNonQuery(dtSpDetail.Rows[0]["sTime"].ToString(), currentSongId, "Title", dtSpDetail.Rows[0]["sBlockType"].ToString(), dtSpDetail.Rows[0]["sTime"].ToString(), splIdPlaylist);
-                }
-
-                sp = "";
-                sp = "select * from tbSeparation where stype='Artist'  and splplaylistid= " + splIdPlaylist;
-                dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    splExecuteNonQuery(dtSpDetail.Rows[0]["sTime"].ToString(), dtTitleDetail.Rows[0]["ArtistID"].ToString(), "Artist", dtSpDetail.Rows[0]["sBlockType"].ToString(), dtSpDetail.Rows[0]["sTime"].ToString(), splIdPlaylist);
-                }
-                sp = "";
-                sp = "select * from tbSeparation where  stype='Album'  and splplaylistid= " + splIdPlaylist;
-                dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    splExecuteNonQuery(dtSpDetail.Rows[0]["sTime"].ToString(), dtTitleDetail.Rows[0]["AlbumID"].ToString(), "Album", dtSpDetail.Rows[0]["sBlockType"].ToString(), dtSpDetail.Rows[0]["sTime"].ToString(), splIdPlaylist);
-                }
-                sp = "";
-                sp = "select * from tbSeparation where stype='Year' and splplaylistid= " + splIdPlaylist;
-                dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    splExecuteNonQuery(dtSpDetail.Rows[0]["sTime"].ToString(), dtTitleDetail.Rows[0]["TitleYear"].ToString(), "Year", dtSpDetail.Rows[0]["sBlockType"].ToString(), dtSpDetail.Rows[0]["sTime"].ToString(), splIdPlaylist);
-                }
-
-                sp = "";
-                sp = "select * from tbSeparation where stype='Genre' and splplaylistid= " + splIdPlaylist;
-                dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    splExecuteNonQuery(dtSpDetail.Rows[0]["sTime"].ToString(), dtTitleDetail.Rows[0]["genreId"].ToString(), "Genre", dtSpDetail.Rows[0]["sBlockType"].ToString(), dtSpDetail.Rows[0]["sTime"].ToString(), splIdPlaylist);
-                }
-
-
-                sp = "";
-                sp = "select * from tbSeparationBlock  order by sType";
-                dtSpDetail = new DataTable();
-                dtSpDetail = ObjMainClass.fnFillDataTable_Local(sp);
-                if (dtSpDetail.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dtSpDetail.Rows.Count; i++)
-                    {
-                        if (dtSpDetail.Rows[i]["stype"].ToString() == "Artist")
-                        {
-                            if (Query == " and 1=1")
-                            {
-                                Query = " ";
-                            }
-                            Query = Query + " and Titles.ArtistID <> " + dtSpDetail.Rows[i]["sid"] + "";
-                        }
-                        if (dtSpDetail.Rows[i]["stype"].ToString() == "Album")
-                        {
-                            if (Query == " and 1=1")
-                            {
-                                Query = " ";
-                            }
-                            Query = Query + " and Titles.AlbumID <> " + dtSpDetail.Rows[i]["sid"] + "";
-                        }
-                        if (dtSpDetail.Rows[i]["stype"].ToString() == "Title")
-                        {
-                            if (Query == " and 1=1")
-                            {
-                                Query = " ";
-                            }
-                            Query = Query + " and Titles.TitleID <> " + dtSpDetail.Rows[i]["sid"] + "";
-                        }
-                        if (dtSpDetail.Rows[i]["stype"].ToString() == "Year")
-                        {
-                            if (Query == " and 1=1")
-                            {
-                                Query = " ";
-                            }
-                            Query = Query + " and Titles.TitleYear <> " + dtSpDetail.Rows[i]["sid"] + "";
-                        }
-                        if (dtSpDetail.Rows[i]["stype"].ToString() == "Genre")
-                        {
-                            if (Query == " and 1=1")
-                            {
-                                Query = " ";
-                            }
-                            Query = Query + " and Titles.genreId <> " + dtSpDetail.Rows[i]["sid"] + "";
-                        }
-                    }
-                }
-
-
-
-                 
-                if (Query != " and 1=1")
-                {
-                    PopulateSplPlaylist(dgPlaylist, Convert.ToInt32(dgLocalPlaylist.Rows[PlaylistRow].Cells[0].Value), Query);
-                    GetNextSong();
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
-        }
-
-        private void SetBlockLength(string sBlockType, string BlockLength, string sid, string bType, string splId)
-        {
-            if (sBlockType == "min")
-            {
-                if (Convert.ToDateTime(BlockLength) <= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)))
-                {
-                    splExecuteNonQuery("0", sid, bType, "0", "", splId);
-                }
-            }
-            if (sBlockType == "hour")
-            {
-                if (Convert.ToDateTime(BlockLength) < Convert.ToDateTime(string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date)))
-                {
-                    splExecuteNonQuery("0", sid, bType, "0", "", splId);
-                }
-            }
-            if (sBlockType == "days")
-            {
-                if (Convert.ToDateTime(BlockLength) < Convert.ToDateTime(string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date)))
-                {
-                    splExecuteNonQuery("0", sid, bType, "0", "", splId);
-                }
-            }
-        }
-        int spTime = 500;
-        private void timSeparation_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                
-                if (spTime <= 600)
-                {
-                    spTime = spTime + 1;
-                    return;
-                }
-                if (bgDownloadAdvt.IsBusy == true)
-                {
-                    spTime = 300;
-                    return;
-                }
-                if (bgDownloadEvent.IsBusy == true)
-                {
-                    spTime = 0;
-                    return;
-                }
-                if (bgDownloadSplSongs.IsBusy == true)
-                {
-                    spTime =0;
-                    return;
-                }
-
-
-                if ((musicPlayer1.URL != "") && (musicPlayer2.URL != ""))
-                {
-                    return;
-                }
-                if (musicPlayer1.URL != "")
-                {
-                    if (Math.Floor(musicPlayer1.Ctlcontrols.currentPosition) > 15)
-                    {
-
-                        if (SearchCurrentSongId != MusicPlayer1CurrentSongId.ToString())
-                        {
-                            SearchCurrentSongId = MusicPlayer1CurrentSongId.ToString();
-                            Separation();
-                        }
-                    }
-
-                }
-                if (musicPlayer2.URL != "")
-                {
-                    if (Math.Floor(musicPlayer2.Ctlcontrols.currentPosition) > 15)
-                    {
-
-                        if (SearchCurrentSongId != MusicPlayer2CurrentSongId.ToString())
-                        {
-                            SearchCurrentSongId = MusicPlayer2CurrentSongId.ToString();
-                            Separation();
-                        }
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        private void splExecuteNonQuery(string BlockLength, string sid, string stype, string qType, string sTime, string splId)
-        {
-            string Up = "";
-            try
-            {
-                if (qType == "min")
-                {
-                    Up = "insert into tbSeparationBlock (sid,stype,BlockLength,sTime,sBlockType,splPlaylistid) values( " + sid + ",'" + stype + "' ,'" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now.AddMinutes(Convert.ToDouble(BlockLength))) + "' ";
-                    Up = Up + " ,'" + sTime + "','" + qType + "'," + splId + " )";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdTitle = new OleDbCommand();
-                    cmdTitle.Connection = StaticClass.LocalCon;
-                    cmdTitle.CommandText = Up;
-                    cmdTitle.ExecuteNonQuery();
-                }
-                if (qType == "hour")
-                {
-                    Up = "insert into tbSeparationBlock (sid,stype,BlockLength,sTime,sBlockType,splPlaylistid) values( " + sid + ",'" + stype + "' ,'" + string.Format("{0:hh:mm tt}", DateTime.Now.AddHours(Convert.ToDouble(BlockLength))) + "' ";
-                    Up = Up + " ,'" + sTime + "','" + qType + "'," + splId + " )";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdTitle = new OleDbCommand();
-                    cmdTitle.Connection = StaticClass.LocalCon;
-                    cmdTitle.CommandText = Up;
-                    cmdTitle.ExecuteNonQuery();
-                }
-                if (qType == "days")
-                {
-                    Up = "insert into tbSeparationBlock (sid,stype,BlockLength,sTime,sBlockType,splPlaylistid) values( " + sid + ",'" + stype + "' ,'" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.AddDays(Convert.ToDouble(BlockLength))) + "' ";
-                    Up = Up + " ,'" + sTime + "','" + qType + "'," + splId + " )";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdTitle = new OleDbCommand();
-                    cmdTitle.Connection = StaticClass.LocalCon;
-                    cmdTitle.CommandText = Up;
-                    cmdTitle.ExecuteNonQuery();
-                }
-                if (qType == "0")
-                {
-                    Up = "delete from  tbSeparationBlock  ";
-                    Up = Up + " where sid=" + sid + " and stype='" + stype + "' and " + splId + "";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdTitle = new OleDbCommand();
-                    cmdTitle.Connection = StaticClass.LocalCon;
-                    cmdTitle.CommandText = Up;
-                    cmdTitle.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        private void GetSeparationDetail()
-        {
-            string st = "";
-            try
-            {
-                DataTable dtL = new DataTable();
-                DataTable dtOn = new DataTable();
-                st = "select  splPlaylistId from tbSplPlaylistSchedule group by splPlaylistId";
-                dtL = ObjMainClass.fnFillDataTable_Local(st);
-                if (dtL.Rows.Count > 0)
-                {
-                    st = "";
-                    st = "delete from tbSeparation  ";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    OleDbCommand cmdIns = new OleDbCommand();
-                    cmdIns.Connection = StaticClass.LocalCon;
-                    cmdIns.CommandText = st;
-                    cmdIns.ExecuteNonQuery();
-
-                    st = "";
-                    st = "delete from  tbSeparationBlock ";
-                    if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                    cmdIns = new OleDbCommand();
-                    cmdIns.Connection = StaticClass.LocalCon;
-                    cmdIns.CommandText = st;
-                    cmdIns.ExecuteNonQuery();
-
-                    for (int i = 0; i < dtL.Rows.Count; i++)
-                    {
-                        st = "";
-                        st = "select * from tbSeparation where splplaylistid= " + dtL.Rows[i]["splPlaylistId"].ToString();
-                        dtOn = new DataTable();
-                        dtOn = ObjMainClass.fnFillDataTable(st);
-                        if (dtOn.Rows.Count > 0)
-                        {
-                            
-
-                            for (int iS = 0; iS < dtOn.Rows.Count; iS++)
-                            {
-                                st = "";
-                                st = "insert into tbSeparation (sType,sTime,sBlockType,splPlaylistid)  values (";
-                                st = st + " '" + dtOn.Rows[iS]["sType"].ToString() + "' , '" + dtOn.Rows[iS]["sTime"].ToString() + "'";
-                                st = st + " ,'" + dtOn.Rows[iS]["sBlockType"].ToString() + "' , '" + dtOn.Rows[iS]["splPlaylistid"].ToString() + "' )";
-                                if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
-                                cmdIns = new OleDbCommand();
-                                cmdIns.Connection = StaticClass.LocalCon;
-                                cmdIns.CommandText = st;
-                                cmdIns.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
 
     }
 

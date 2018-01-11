@@ -16,7 +16,7 @@ using System.Net;
 using System.Data.OleDb;
 using System.Net.NetworkInformation;
 
-namespace AlenkaMyClaudPlayer
+namespace StoreAndForwardPlayer
 {
 
     class gblClass
@@ -1007,62 +1007,6 @@ namespace AlenkaMyClaudPlayer
                 cmdTitle.ExecuteNonQuery();
                 StaticClass.LocalCon.Close();
             }
-            if (DoesFieldExist("tbSpecialPlaylists_Titles", "tYear", StaticClass.LocalCon.ConnectionString.ToString()) == false)
-            {
-                strInsert = "ALTER TABLE tbSpecialPlaylists_Titles ADD tYear number";
-                if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
-                StaticClass.LocalCon.Open();
-                OleDbCommand cmdTitle = new OleDbCommand();
-                cmdTitle.Connection = StaticClass.LocalCon;
-                cmdTitle.CommandText = strInsert;
-                cmdTitle.ExecuteNonQuery();
-                StaticClass.LocalCon.Close();
-            }
-            if (DoesFieldExist("tbSpecialPlaylists_Titles", "genreId", StaticClass.LocalCon.ConnectionString.ToString()) == false)
-            {
-                strInsert = "ALTER TABLE tbSpecialPlaylists_Titles ADD genreId number";
-                if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
-                StaticClass.LocalCon.Open();
-                OleDbCommand cmdTitle = new OleDbCommand();
-                cmdTitle.Connection = StaticClass.LocalCon;
-                cmdTitle.CommandText = strInsert;
-                cmdTitle.ExecuteNonQuery();
-                StaticClass.LocalCon.Close();
-            }
-            if (DoesFieldExist("Titles", "genreId", StaticClass.LocalCon.ConnectionString.ToString()) == false)
-            {
-                strInsert = "ALTER TABLE Titles ADD genreId number";
-                if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
-                StaticClass.LocalCon.Open();
-                OleDbCommand cmdTitle = new OleDbCommand();
-                cmdTitle.Connection = StaticClass.LocalCon;
-                cmdTitle.CommandText = strInsert;
-                cmdTitle.ExecuteNonQuery();
-                StaticClass.LocalCon.Close();
-            }
-            if (TableExists("tbSeparation") == false)
-            {
-                strInsert = "CREATE TABLE tbSeparation([sType] text ,[sTime] text , [sBlockType] text,[splPlaylistid] number )";
-                if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
-                StaticClass.LocalCon.Open();
-                OleDbCommand cmdTitle = new OleDbCommand();
-                cmdTitle.Connection = StaticClass.LocalCon;
-                cmdTitle.CommandText = strInsert;
-                cmdTitle.ExecuteNonQuery();
-                StaticClass.LocalCon.Close();
-            }
-            if (TableExists("tbSeparationBlock") == false)
-            {
-                strInsert = "CREATE TABLE tbSeparationBlock([sid] number,[sType] text ,[BlockLength] text,[sTime] text , [sBlockType] text,[splPlaylistid] number )";
-                if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
-                StaticClass.LocalCon.Open();
-                OleDbCommand cmdTitle = new OleDbCommand();
-                cmdTitle.Connection = StaticClass.LocalCon;
-                cmdTitle.CommandText = strInsert;
-                cmdTitle.ExecuteNonQuery();
-                StaticClass.LocalCon.Close();
-            }
-
         }
 
        public bool DoesFieldExist(string tblName, string fldName, string cnnStr)
