@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AA4C62A-15E0-4FF4-B0CA-7E9F1874322F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementPanel</RootNamespace>
+    <AssemblyName>ManagementPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Eufory.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ManagementPanel.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>C:\Users\ParasNet\Desktop\SearchCriteria\SearchCriteria\bin\Debug\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\GetAllSongsUntitly\GetAllSongs\GetAllSongs\bin\Debug\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdvertisementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvertisementDetail.Designer.cs">
+      <DependentUpon>frmAdvertisementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdvtAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvtAdmin.Designer.cs">
+      <DependentUpon>frmAdvtAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsianTokenGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsianTokenGeneration.designer.cs">
+      <DependentUpon>frmAsianTokenGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsianTokenSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsianTokenSettings.designer.cs">
+      <DependentUpon>frmAsianTokenSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssignMobileStreams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssignMobileStreams.Designer.cs">
+      <DependentUpon>frmAssignMobileStreams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssignTokenStreams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssignTokenStreams.Designer.cs">
+      <DependentUpon>frmAssignTokenStreams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBestofPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBestofPlaylist.Designer.cs">
+      <DependentUpon>frmBestofPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeAppMiddleImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeAppMiddleImage.Designer.cs">
+      <DependentUpon>frmChangeAppMiddleImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientDetail.designer.cs">
+      <DependentUpon>frmClientDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings_iPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings_iPhone.Designer.cs">
+      <DependentUpon>frmCopyleftTokenSettings_iPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration_Android.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration_Android.Designer.cs">
+      <DependentUpon>frmCopyleftTokenGeneration_Android.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration_iPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration_iPhone.Designer.cs">
+      <DependentUpon>frmCopyleftTokenGeneration_iPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings.Designer.cs">
+      <DependentUpon>frmCopyleftTokenSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettingsAsian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettingsAsian.designer.cs">
+      <DependentUpon>frmCopyleftTokenSettingsAsian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings_Android.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSettings_Android.Designer.cs">
+      <DependentUpon>frmCopyleftTokenSettings_Android.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSetting_Android.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenSetting_Android.Designer.cs">
+      <DependentUpon>frmCopyleftTokenSetting_Android.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyPlaylistSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyPlaylistSchedule.Designer.cs">
+      <DependentUpon>frmCopyPlaylistSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyPrayerTimig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyPrayerTimig.Designer.cs">
+      <DependentUpon>frmCopyPrayerTimig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyrightTokenSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyrightTokenSettings.Designer.cs">
+      <DependentUpon>frmCopyrightTokenSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCopyleftTokenGeneration.Designer.cs">
+      <DependentUpon>frmCopyleftTokenGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealerContent.Designer.cs">
+      <DependentUpon>frmDealerContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerContent1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmDealerContent.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealerLedger.Designer.cs">
+      <DependentUpon>frmDealerLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealerRegistration.Designer.cs">
+      <DependentUpon>frmDealerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerUserDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealerUserDetail.Designer.cs">
+      <DependentUpon>frmDealerUserDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportExcel.Designer.cs">
+      <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoblieAppStreams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoblieAppStreams.Designer.cs">
+      <DependentUpon>frmMoblieAppStreams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOnlineStreaming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOnlineStreaming.Designer.cs">
+      <DependentUpon>frmOnlineStreaming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtherCustomerStreamURLDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtherCustomerStreamURLDetails.Designer.cs">
+      <DependentUpon>frmOtherCustomerStreamURLDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlayerUpdateVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlayerUpdateVersion.Designer.cs">
+      <DependentUpon>frmPlayerUpdateVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrayer.Designer.cs">
+      <DependentUpon>frmPrayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeparation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeparation.Designer.cs">
+      <DependentUpon>frmSeparation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialEvent.Designer.cs">
+      <DependentUpon>frmSpecialEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialPlaylistFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialPlaylistFormat.Designer.cs">
+      <DependentUpon>frmSpecialPlaylistFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialPlaylists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialPlaylists.Designer.cs">
+      <DependentUpon>frmSpecialPlaylists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStreamShedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStreamShedule.Designer.cs">
+      <DependentUpon>frmStreamShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTempPlaylistSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTempPlaylistSchedule.Designer.cs">
+      <DependentUpon>frmTempPlaylistSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTokenDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTokenDetail.Designer.cs">
+      <DependentUpon>frmTokenDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTokenExpiryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTokenExpiryReport.Designer.cs">
+      <DependentUpon>frmTokenExpiryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTokenGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTokenGeneration.Designer.cs">
+      <DependentUpon>frmTokenGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.Designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTokenInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTokenInformation.Designer.cs">
+      <DependentUpon>frmTokenInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserlogin.Designer.cs">
+      <DependentUpon>frmUserlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVideoAdvtAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVideoAdvtAdmin.Designer.cs">
+      <DependentUpon>frmVideoAdvtAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gblClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticClass.cs" />
+    <EmbeddedResource Include="frmAdvertisementDetail.resx">
+      <DependentUpon>frmAdvertisementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdvtAdmin.resx">
+      <DependentUpon>frmAdvtAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsianTokenGeneration.resx">
+      <DependentUpon>frmAsianTokenGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsianTokenSettings.resx">
+      <DependentUpon>frmAsianTokenSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssignMobileStreams.resx">
+      <DependentUpon>frmAssignMobileStreams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssignTokenStreams.resx">
+      <DependentUpon>frmAssignTokenStreams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBestofPlaylist.resx">
+      <DependentUpon>frmBestofPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeAppMiddleImage.resx">
+      <DependentUpon>frmChangeAppMiddleImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientDetail.resx">
+      <DependentUpon>frmClientDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenGeneration_Android.resx">
+      <DependentUpon>frmCopyleftTokenGeneration_Android.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenGeneration_iPhone.resx">
+      <DependentUpon>frmCopyleftTokenGeneration_iPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenSettings.resx">
+      <DependentUpon>frmCopyleftTokenSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenSettingsAsian.resx">
+      <DependentUpon>frmCopyleftTokenSettingsAsian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenSettings_Android.resx">
+      <DependentUpon>frmCopyleftTokenSettings_Android.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenSettings_iPhone.resx">
+      <DependentUpon>frmCopyleftTokenSettings_iPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyPlaylistSchedule.resx">
+      <DependentUpon>frmCopyPlaylistSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyPrayerTimig.resx">
+      <DependentUpon>frmCopyPrayerTimig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyrightTokenSettings.resx">
+      <DependentUpon>frmCopyrightTokenSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCopyleftTokenGeneration.resx">
+      <DependentUpon>frmCopyleftTokenGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealerContent.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmDealerContent1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealerLedger.resx">
+      <DependentUpon>frmDealerLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealerRegistration.resx">
+      <DependentUpon>frmDealerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealerUserDetail.resx">
+      <DependentUpon>frmDealerUserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportExcel.resx">
+      <DependentUpon>frmImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoblieAppStreams.resx">
+      <DependentUpon>frmMoblieAppStreams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOnlineStreaming.resx">
+      <DependentUpon>frmOnlineStreaming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtherCustomerStreamURLDetails.resx">
+      <DependentUpon>frmOtherCustomerStreamURLDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlayerUpdateVersion.resx">
+      <DependentUpon>frmPlayerUpdateVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrayer.resx">
+      <DependentUpon>frmPrayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeparation.resx">
+      <DependentUpon>frmSeparation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialEvent.resx">
+      <DependentUpon>frmSpecialEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialPlaylistFormat.resx">
+      <DependentUpon>frmSpecialPlaylistFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialPlaylists.resx">
+      <DependentUpon>frmSpecialPlaylists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStreamShedule.resx">
+      <DependentUpon>frmStreamShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTokenDetail.resx">
+      <DependentUpon>frmTokenDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTokenExpiryReport.resx">
+      <DependentUpon>frmTokenExpiryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTokenGeneration.resx">
+      <DependentUpon>frmTokenGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistration.resx">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTokenInformation.resx">
+      <DependentUpon>frmTokenInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserlogin.resx">
+      <DependentUpon>frmUserlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVideoAdvtAdmin.resx">
+      <DependentUpon>frmVideoAdvtAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid-enable.png" />
+    <None Include="Resources\Down.png" />
+    <Content Include="Resources\Eufory.ico" />
+    <Content Include="Icon.ico" />
+    <None Include="Resources\Save2.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\499.GIF" />
+    <None Include="Resources\256.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

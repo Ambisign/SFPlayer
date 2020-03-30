@@ -1,0 +1,11 @@
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\bin\Debug\UpdateNativePlayerCopyright.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\bin\Debug\UpdateNativePlayerCopyright.pdb
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.csprojResolveAssemblyReference.cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.csproj.ResolveComReference.cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmTitles.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmUpdateMusicPlayer.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.Properties.Resources.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.pdb

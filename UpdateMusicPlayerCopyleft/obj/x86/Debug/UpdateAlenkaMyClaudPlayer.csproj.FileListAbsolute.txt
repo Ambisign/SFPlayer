@@ -1,0 +1,4 @@
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateAlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateAlenkaMyClaudPlayer.csproj.ResolveComReference.cache

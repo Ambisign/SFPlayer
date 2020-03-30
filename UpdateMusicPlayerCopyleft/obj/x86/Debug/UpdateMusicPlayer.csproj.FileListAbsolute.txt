@@ -1,0 +1,9 @@
+E:\UpdateMusicPlayer\UpdateMusicPlayer\bin\Debug\UpdateMusicPlayer.exe
+E:\UpdateMusicPlayer\UpdateMusicPlayer\bin\Debug\UpdateMusicPlayer.pdb
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\UpdateMusicPlayer.frmUpdateMusicPlayer.resources
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\UpdateMusicPlayer.Properties.Resources.resources
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\UpdateMusicPlayer.exe
+E:\UpdateMusicPlayer\UpdateMusicPlayer\obj\x86\Debug\UpdateMusicPlayer.pdb

@@ -1,0 +1,298 @@
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\ManagementPanel.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\ManagementPanel.pdb
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\NAudio.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\ClosedXML.xml
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.xml
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMain.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.pdb
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ClosedXML.xml
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.xml
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMain.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.pdb
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.xml
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMain.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerContent.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPlaylistSchedule.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPrayerTimig.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSeparation.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\bin\Debug\ManagementPanel.exe
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\bin\Debug\ManagementPanel.pdb
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\bin\Debug\DocumentFormat.OpenXml.dll
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\bin\Debug\DocumentFormat.OpenXml.xml
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAssignMobileStreams.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmAssignTokenStreams.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyPlaylistSchedule.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyPrayerTimig.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmDealerContent.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmMain.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmSeparation.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.exe
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.pdb
+F:\PlayerBKP\ManagementPanel30Mar2017-After this I change the server ip address to 37.61\obj\x86\Debug\ManagementPanel.frmOtherCustomerStreamURLDetails.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignMobileStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignTokenStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOtherCustomerStreamURLDetails.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.pdb
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.dll
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\DocumentFormat.OpenXml.xml
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignMobileStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignTokenStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPlaylistSchedule.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPrayerTimig.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerContent.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMain.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOtherCustomerStreamURLDetails.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSeparation.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+G:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.pdb
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvertisementDetail.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAdvtAdmin.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenGeneration.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAsianTokenSettings.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignMobileStreams.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmAssignTokenStreams.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmBestofPlaylist.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmChangeAppMiddleImage.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmClientDetail.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_Android.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration_iPhone.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettingsAsian.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_Android.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenSettings_iPhone.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPlaylistSchedule.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyPrayerTimig.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyrightTokenSettings.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmCopyleftTokenGeneration.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerContent.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerLedger.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerRegistration.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmDealerUserDetail.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmImportExcel.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMain.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmMoblieAppStreams.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOnlineStreaming.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmOtherCustomerStreamURLDetails.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPlayerUpdateVersion.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmPrayer.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSeparation.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialEvent.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylistFormat.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmSpecialPlaylists.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmStreamShedule.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenDetail.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenExpiryReport.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenGeneration.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmRegistration.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmTokenInformation.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmUserlogin.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.frmVideoAdvtAdmin.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.Properties.Resources.resources
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csproj.GenerateResource.Cache
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe.config

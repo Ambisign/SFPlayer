@@ -1,0 +1,114 @@
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.pdb
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csprojResolveAssemblyReference.cache
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Clientlogin.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.CopyrightPlayer.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmNet.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmStart.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.userlogin.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Properties.Resources.resources
+D:\d drive backup\MusicPlayerBKP\2016\Aug2016\MusicPlayerProject - NativeClaudioCopyright- 23Aug Before Working start on Video playlist\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.pdb
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csprojResolveAssemblyReference.cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Clientlogin.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.CopyrightPlayer.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmNet.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmStart.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.userlogin.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Properties.Resources.resources
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\ParasBackup\MusicPlayerProject - NativeClaudioCopyright\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csprojResolveAssemblyReference.cache
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Clientlogin.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.CopyrightPlayer.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmNet.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmStart.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.userlogin.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Properties.Resources.resources
+G:\Projects\ParasBackup\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.GenerateResource.Cache
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csprojResolveAssemblyReference.cache
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Clientlogin.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.CopyrightPlayer.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmNet.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmStart.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.userlogin.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Properties.Resources.resources
+G:\Projects\JanCode\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.GenerateResource.Cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe.config
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AlenkaMyClaudPlayer.pdb
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\Interop.WMPLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\bin\Debug\AxInterop.WMPLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csprojResolveAssemblyReference.cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.DAO.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.NetFwTypeLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\Interop.WMPLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.ResolveComReference.cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Clientlogin.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.CopyrightPlayer.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmNet.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.frmStart.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.userlogin.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.Properties.Resources.resources
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.csproj.GenerateResource.Cache
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.exe
+G:\Projects\MusicPlayer\WorkingProjects\AlenkaMyClaudPlayer\MusicPlayerCopyleft\MusicPlayer\obj\x86\Debug\AlenkaMyClaudPlayer.pdb

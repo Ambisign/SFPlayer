@@ -1,0 +1,41 @@
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.exe
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.pdb
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.ResolveComReference.cache
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayer.frmUpdateMusicPlayer.resources
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.Properties.Resources.resources
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.GenerateResource.Cache
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.exe
+D:\d drive backup\MusicPlayerBKP\Apr2015\MusicPlayerProject14Apr\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.ResolveComReference.cache
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayer.frmUpdateMusicPlayer.resources
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.Properties.Resources.resources
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.GenerateResource.Cache
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicPlayerProject\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.ResolveComReference.cache
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayer.frmUpdateMusicPlayer.resources
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.Properties.Resources.resources
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicProject\MusicPlayerProject - TotalFina\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csprojResolveAssemblyReference.cache
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.ResolveComReference.cache
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayer.frmUpdateMusicPlayer.resources
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.Properties.Resources.resources
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.GenerateResource.Cache
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicProject\MusicPlayerProject - MyClaud_Native_Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.pdb
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.csproj.ResolveComReference.cache
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.exe
+E:\MusicProject\MusicPlayerProject - NativeClaudioCopyright\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateMusicPlayerCopyleft.pdb
