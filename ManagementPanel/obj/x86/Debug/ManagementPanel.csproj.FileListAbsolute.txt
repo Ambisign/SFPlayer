@@ -296,3 +296,6 @@ F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPa
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\obj\x86\Debug\ManagementPanel.csprojResolveAssemblyReference.cache
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\AlenkaMyClaudPlayer\ManagementPanel\bin\Debug\ManagementPanel.exe.config
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\ManagementPanel\bin\Debug\ManagementPanel.exe.config
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\ManagementPanel\obj\x86\Debug\ManagementPanel.exe
+F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\ManagementPanel\obj\x86\Debug\ManagementPanel.pdb
