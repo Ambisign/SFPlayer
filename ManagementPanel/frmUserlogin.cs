@@ -310,8 +310,8 @@ namespace ManagementPanel
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SendOTPMail();
-            return;
+            //SendOTPMail();
+            //return;
              
 
 
