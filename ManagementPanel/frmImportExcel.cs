@@ -143,7 +143,7 @@ namespace ManagementPanel
             }
             #endregion
 
-            if (dgExcel.ColumnCount != 12)
+            if (dgExcel.ColumnCount != 15)
             {
                
                 MessageBox.Show("Selected excel file is not a correct file", "Direct Upload");
@@ -222,6 +222,25 @@ namespace ManagementPanel
                 dgExcel.DataSource = null;
                 return;
             }
+            if (dgExcel.Columns[12].Name.ToLower() != "label")
+            {
+                MessageBox.Show("Label column is not match with sequence", "Direct Upload");
+                dgExcel.DataSource = null;
+                return;
+            }
+            if (dgExcel.Columns[13].Name.ToLower() != "isexplicit")
+            {
+                MessageBox.Show("IsExplicit column is not match with sequence", "Direct Upload");
+                dgExcel.DataSource = null;
+                return;
+            }
+            if (dgExcel.Columns[14].Name.ToLower() != "country")
+            {
+                MessageBox.Show("Country column is not match with sequence", "Direct Upload");
+                dgExcel.DataSource = null;
+                return;
+            }
+
             panControls.Enabled = false;
             panPopUp.Visible = true;
             lblName.Text = "Copy excel sheet in database";
@@ -244,7 +263,7 @@ namespace ManagementPanel
             foreach (DataGridViewRow row in dgExcel.Rows)
             {
 
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO tbAlenkaMedia(Title, Album, Artist,Genre, Tempo, Filename,Year,time,category,language,isRoyaltyfree,isrc) VALUES(@Title, @Album, @Artist,@Genre, @Tempo, @Filename,@Year,@time,@category,@language,@isRoyaltyfree,@isrc)", StaticClass.constr))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO tbAlenkaMedia(Title, Album, Artist,Genre, Tempo, Filename,Year,time,category,language,isRoyaltyfree,isrc,label,IsExplicit,Country) VALUES(@Title, @Album, @Artist,@Genre, @Tempo, @Filename,@Year,@time,@category,@language,@isRoyaltyfree,@isrc,@label,@IsExplicit,@Country)", StaticClass.constr))
                 {
 
                     byte[] byteBuffer = new byte[iSize];
@@ -262,6 +281,10 @@ namespace ManagementPanel
                         cmd.Parameters.AddWithValue("@language", row.Cells[9].Value);
                         cmd.Parameters.AddWithValue("@isRoyaltyfree", row.Cells[10].Value);
                         cmd.Parameters.AddWithValue("@isrc", row.Cells[11].Value);
+
+                        cmd.Parameters.AddWithValue("@label", row.Cells[12].Value);
+                        cmd.Parameters.AddWithValue("@IsExplicit", row.Cells[13].Value);
+                        cmd.Parameters.AddWithValue("@Country", row.Cells[14].Value);
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
                         cmd.ExecuteNonQuery();
@@ -408,6 +431,7 @@ namespace ManagementPanel
 
                                     cmd.Parameters.Add(new SqlParameter("@acategory", SqlDbType.VarChar));
                                     cmd.Parameters["@acategory"].Value = dtDetail.Rows[iCtr]["aCategory"];
+
 
                                     Title_Id = Convert.ToInt32(cmd.ExecuteScalar());
                                     //  MessageBox.Show(Title_Id.ToString());
@@ -632,6 +656,19 @@ namespace ManagementPanel
 
                                     cmd.Parameters.Add(new SqlParameter("@FileSize", SqlDbType.VarChar));
                                     cmd.Parameters["@FileSize"].Value = fileSize.ToString();
+                                     
+                                    cmd.Parameters.Add(new SqlParameter("@dfclientid", SqlDbType.BigInt));
+                                    cmd.Parameters["@dfclientid"].Value = "0";
+                                    cmd.Parameters.Add(new SqlParameter("@folderId", SqlDbType.Int));
+                                    cmd.Parameters["@folderId"].Value = "0";
+                                    cmd.Parameters.Add(new SqlParameter("@AssetID_WeMix", SqlDbType.VarChar));
+                                    cmd.Parameters["@AssetID_WeMix"].Value = "";
+                                    cmd.Parameters.Add(new SqlParameter("@Country_WeMix", SqlDbType.VarChar));
+                                    cmd.Parameters["@Country_WeMix"].Value = dtDetail.Rows[iCtr]["Country"]; 
+                                    cmd.Parameters.Add(new SqlParameter("@Explicit", SqlDbType.Int));
+                                    cmd.Parameters["@Explicit"].Value = dtDetail.Rows[iCtr]["IsExplicit"];
+                                    cmd.Parameters.Add(new SqlParameter("@label", SqlDbType.VarChar));
+                                    cmd.Parameters["@label"].Value = dtDetail.Rows[iCtr]["label"];
 
                                     Title_Id = Convert.ToInt32(cmd.ExecuteScalar());
                                  // MessageBox.Show(Title_Id.ToString());
