@@ -563,7 +563,7 @@ namespace ManagementPanel
                         }
 
                       //  MessageBox.Show(GenreId.ToString() + " 2");
-                        str = "select *,isnull(tempo,0) as aTempo,isnull(year,0) as ayear, isnull(Category,'') as aCategory , isnull(language,'') as lang, isnull(isRoyaltyfree,0) as isRF, isnull(isrc,'') as isr, 4 as  titlecategoryid,22 as titleSubcategoryid from tbAlenkaMedia where genre='" + dtGenre.Rows[iGen]["genre"].ToString().Trim() + "' order by titleid ";
+                        str = "select *,isnull(tempo,0) as aTempo,isnull(year,0) as ayear, isnull(Category,'') as aCategory , isnull(language,'') as lang, isnull(isRoyaltyfree,0) as isRF, isnull(isrc,'') as isr, 4 as  titlecategoryid,22 as titleSubcategoryid, isnull(label,'') as lbel, isnull(country,'') as ctry from tbAlenkaMedia where genre='" + dtGenre.Rows[iGen]["genre"].ToString().Trim() + "'";
                         dtDetail = fnFillDataTable(str);
                        // MessageBox.Show(dtDetail.Rows.Count.ToString() + " 3");
                         if ((dtDetail.Rows.Count > 0))
@@ -664,14 +664,15 @@ namespace ManagementPanel
                                     cmd.Parameters.Add(new SqlParameter("@AssetID_WeMix", SqlDbType.VarChar));
                                     cmd.Parameters["@AssetID_WeMix"].Value = "";
                                     cmd.Parameters.Add(new SqlParameter("@Country_WeMix", SqlDbType.VarChar));
-                                    cmd.Parameters["@Country_WeMix"].Value = dtDetail.Rows[iCtr]["Country"]; 
+                                    cmd.Parameters["@Country_WeMix"].Value = dtDetail.Rows[iCtr]["ctry"]; 
                                     cmd.Parameters.Add(new SqlParameter("@Explicit", SqlDbType.Int));
                                     cmd.Parameters["@Explicit"].Value = dtDetail.Rows[iCtr]["IsExplicit"];
                                     cmd.Parameters.Add(new SqlParameter("@label", SqlDbType.VarChar));
-                                    cmd.Parameters["@label"].Value = dtDetail.Rows[iCtr]["label"];
-
+                                    cmd.Parameters["@label"].Value = dtDetail.Rows[iCtr]["lbel"]; 
+                                    cmd.Parameters.Add(new SqlParameter("@dbType", SqlDbType.VarChar));
+                                    cmd.Parameters["@dbType"].Value = "Both";
                                     Title_Id = Convert.ToInt32(cmd.ExecuteScalar());
-                                 // MessageBox.Show(Title_Id.ToString());
+                                 //MessageBox.Show(Title_Id.ToString());
                                     //reader.Close();
                                     
                                     if (Title_Id != 0)
