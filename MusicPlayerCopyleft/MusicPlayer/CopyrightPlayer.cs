@@ -112,7 +112,7 @@ namespace StoreAndForwardPlayer
         string AdvtPlayTime = "";
         string AdvtUrl = "";
         string AdvtFilePath = "";
-
+        CultureInfo cInfo = new CultureInfo("en-IN");
         WebClient wcDownloadRequestSong = new WebClient();
 
         public CopyrightPlayer()
@@ -551,7 +551,7 @@ namespace StoreAndForwardPlayer
                         #region Upload LogOut Status
 
                         string strZ = "insert into tbTokenLogOutStatus(TokenId,StatusDate,StatusTime) values(" + StaticClass.TokenId + " , ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "','" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "') ";
+                        strZ = strZ + " '" + string.Format(cInfo,"{0:dd-MMM-yyyy}", DateTime.Now.Date) + "','" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "') ";
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
                         SqlCommand cmdLog = new SqlCommand();
@@ -603,7 +603,7 @@ namespace StoreAndForwardPlayer
             lblPlayState.Text = "";
             panAdvt.Visible = true;
             panAdvt.Location = new Point(-500, -500);
-           // button3.Visible = false;
+            button3.Visible = false;
             if (StaticClass.IsLock == true)
             {
                 panMainPlaylist.Visible = false;
@@ -829,8 +829,8 @@ namespace StoreAndForwardPlayer
                     for (int iCtr = 0; (iCtr <= (dtDetail.Rows.Count - 1)); iCtr++)
                     {
                         str = "";
-                        str = "insert into tbPrayer(pId,sDate,eDate,sTime,eTime) values(" + dtDetail.Rows[iCtr]["pId"] + ", #" + string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["sDate"]) + "# ,";
-                        str = str + " #" + string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["eDate"]) + "# ,#" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]) + "#, #" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]) + "# )";
+                        str = "insert into tbPrayer(pId,sDate,eDate,sTime,eTime) values(" + dtDetail.Rows[iCtr]["pId"] + ", #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["sDate"]) + "# ,";
+                        str = str + " #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["eDate"]) + "# ,#" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]) + "#, #" + string.Format(cInfo,  "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]) + "# )";
                         if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                         OleDbCommand cmdIns = new OleDbCommand();
                         cmdIns.Connection = StaticClass.LocalCon;
@@ -7153,7 +7153,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.IsAdvtBetweenTime == true)
                 {
 
-                    if (Convert.ToDateTime(StaticClass.AdvtClosingTime) == Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)))
+                    if (Convert.ToDateTime(StaticClass.AdvtClosingTime) == Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)))
                     {
                         this.WindowState = FormWindowState.Maximized;
                         AdvtPlayer.Location = new Point(0, 0);
@@ -7178,15 +7178,15 @@ namespace StoreAndForwardPlayer
                         }
 
                         //DateTime dt1 = Convert.ToDateTime(StaticClass.AdvtClosingTime);
-                        //StaticClass.AdvtClosingTime = string.Format(fi, "{0:hh:mm tt}", dt1.AddMinutes(-1));
+                        //StaticClass.AdvtClosingTime = string.Format(cInfo, "{0:hh:mm tt}", dt1.AddMinutes(-1));
 
 
                         for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
                         {
-                            if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
+                            if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
                             {
                                 FillAdvtTempData();
-                                StaticClass.AdvtClosingTime = string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
+                                StaticClass.AdvtClosingTime = string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
                                 IsNextAdvtPlaylistFind = "Yes";
                                 break;
                             }
@@ -7200,11 +7200,11 @@ namespace StoreAndForwardPlayer
                         {
                             for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
                             {
-                                //if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
-                                if (string.Format(fi, "{0:hh:mm tt}", DateTime.Now) == string.Format(fi, "{0:hh:mm tt}", dgAdvt.Rows[iRow].Cells["bStime"].Value))
+                                //if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
+                                if (string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) == string.Format(cInfo, "{0:hh:mm tt}", dgAdvt.Rows[iRow].Cells["bStime"].Value))
                                 {
                                     FillAdvtTempDataSingle();
-                                    StaticClass.AdvtClosingTime = string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
+                                    StaticClass.AdvtClosingTime = string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
                                     IsNextAdvtPlaylistFind = "Yes";
                                     break;
                                 }
@@ -7635,13 +7635,13 @@ namespace StoreAndForwardPlayer
                     if (dgAdvt.Rows.Count > 0)
                     {
                         IsAllDownload = "Yes";
-                        lblCurrentTime.Text = string.Format(fi, "{0:hh:mm tt}", DateTime.Now);
+                        lblCurrentTime.Text = string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now);
                         if (StaticClass.AdvtClosingTime == lblCurrentTime.Text) return;
-                        if (Convert.ToDateTime(StaticClass.AdvtClosingTime) <= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)))
+                        if (Convert.ToDateTime(StaticClass.AdvtClosingTime) <= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)))
                         {
                             for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
                             {
-                                if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
+                                if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
                                 {
                                     if (dgAdvt.Rows[iRow].Cells["Status"].Style.BackColor != Color.LightGreen)
                                     {
@@ -7656,11 +7656,11 @@ namespace StoreAndForwardPlayer
                             }
                             for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
                             {
-                                if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
+                                if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
                                 {
                                     FillAdvtTempData();
                                     GetUpcomingAdvt_Between();
-                                    StaticClass.AdvtClosingTime = string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
+                                    StaticClass.AdvtClosingTime = string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value));
 
                                     if (dgAdvtTemp.Rows.Count > 0)
                                     {
@@ -7915,11 +7915,11 @@ namespace StoreAndForwardPlayer
             string lPath = "";
             DataTable dtDetail;
             DataTable dtDetailLocal;
-            str = "select * from tbAdvt where ScheduleDate=#" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
+            str = "select * from tbAdvt where ScheduleDate=#" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
             dtDetailLocal = ObjMainClass.fnFillDataTable_Local(str);
             str = "";
 
-            str = "select * from tbAdvertisement where #" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by srno";
+            str = "select * from tbAdvertisement where #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by srno";
             dtDetail = ObjMainClass.fnFillDataTable_Local(str);
             InitilizeMainAdvertisementGrid();
             if ((dtDetail.Rows.Count > 0))
@@ -7945,9 +7945,9 @@ namespace StoreAndForwardPlayer
                     }
 
                     dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[5].Value = dtDetail.Rows[iCtr]["AdvtTypeName"];
-                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[6].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
-                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[7].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
-                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[8].Value = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
+                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[6].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
+                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[7].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
+                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells[8].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
 
                     if (Convert.ToInt32(dtDetail.Rows[iCtr]["IsVideo"]) == 1)
                     {
@@ -7977,8 +7977,8 @@ namespace StoreAndForwardPlayer
                     dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["IsVideoMute"].Value = dtDetail.Rows[iCtr]["IsVideoMute"];
                     dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["IsPicture"].Value = dtDetail.Rows[iCtr]["IsPicture"];
 
-                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["bStime"].Value = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]);
-                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["bEtime"].Value = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]);
+                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["bStime"].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]);
+                    dgAdvt.Rows[dgAdvt.Rows.Count - 1].Cells["bEtime"].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]);
 
 
 
@@ -8213,7 +8213,7 @@ namespace StoreAndForwardPlayer
                     if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                     OleDbCommand cmdDelAdvt = new OleDbCommand();
                     cmdDelAdvt.Connection = StaticClass.LocalCon;
-                    cmdDelAdvt.CommandText = "delete from tbAdvt  where ScheduleDate=#" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
+                    cmdDelAdvt.CommandText = "delete from tbAdvt  where ScheduleDate=#" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
                     cmdDelAdvt.ExecuteNonQuery();
 
 
@@ -8227,7 +8227,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                 OleDbCommand cmdInsertVal = new OleDbCommand();
                 cmdInsertVal.Connection = StaticClass.LocalCon;
-                cmdInsertVal.CommandText = "insert into tbAdvt(AdvtId,ScheduleDate) values(" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + ",'" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "')";
+                cmdInsertVal.CommandText = "insert into tbAdvt(AdvtId,ScheduleDate) values(" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + ",'" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "')";
                 cmdInsertVal.ExecuteNonQuery();
 
                 dgAdvt.Rows[AdvtCurrentRow].Cells[4].Value = "Done";
@@ -8238,7 +8238,7 @@ namespace StoreAndForwardPlayer
             {
                 try
                 {
-                    dtTable = ObjMainClass.fnFillDataTable_Local("select * from tbAdvertisement where #" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by srno");
+                    dtTable = ObjMainClass.fnFillDataTable_Local("select * from tbAdvertisement where #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by srno");
 
                     WMPLib.IWMPPlaylist playlist = AdvtPlayer.playlistCollection.newPlaylist("myplaylist");
                     WMPLib.IWMPMedia media;
@@ -8338,7 +8338,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                 OleDbCommand cmdInsertVal = new OleDbCommand();
                 cmdInsertVal.Connection = StaticClass.LocalCon;
-                cmdInsertVal.CommandText = "insert into tbAdvt(AdvtId,ScheduleDate) values(" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + ",'" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "')";
+                cmdInsertVal.CommandText = "insert into tbAdvt(AdvtId,ScheduleDate) values(" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + ",'" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "')";
                 cmdInsertVal.ExecuteNonQuery();
 
                 dgAdvt.Rows[AdvtCurrentRow].Cells["Play"].Value = "Done";
@@ -8420,8 +8420,8 @@ namespace StoreAndForwardPlayer
             string strAdvt = "";
             strAdvt = "";
             strAdvt = strAdvt + " insert into tbTokenAdvtStatus(TokenId,AdvtId,StatusDate,StatusTime, IsUpload) values( " + StaticClass.TokenId + ", ";
-            strAdvt = strAdvt + " '" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + "' ,'" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "', ";
-            strAdvt = strAdvt + " '" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "',0)";
+            strAdvt = strAdvt + " '" + dgAdvt.Rows[AdvtCurrentRow].Cells[0].Value.ToString() + "' ,'" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "', ";
+            strAdvt = strAdvt + " '" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "',0)";
 
             if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
             OleDbCommand cmdAdvtStatus = new OleDbCommand();
@@ -8500,9 +8500,9 @@ namespace StoreAndForwardPlayer
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[0].Value = dtDetail.Rows[iCtr]["AdvtId"];
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[1].Value = dtDetail.Rows[iCtr]["AdvtDisplayName"];
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[2].Value = dtDetail.Rows[iCtr]["AdvtTypeName"];
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[3].Value = string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[4].Value = string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[5].Value = string.Format("{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[3].Value = string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[4].Value = string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[5].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
 
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[1].Style.ForeColor = Color.Black;
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells[2].Style.ForeColor = Color.Black;
@@ -8729,7 +8729,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                 cmdSaveLast = new OleDbCommand();
                 cmdSaveLast.Connection = StaticClass.LocalCon;
-                strs = "insert into tbTokenPlayedSongs (TokenId, playDate,playTime,TitleId,Artistid,splplaylistid,IsUpload) values (" + StaticClass.TokenId + ", #" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "#,#" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "# ," + LocalTitleId + "," + dt_Artist_ID + "," + dt_Spl_ID + ",0)";
+                strs = "insert into tbTokenPlayedSongs (TokenId, playDate,playTime,TitleId,Artistid,splplaylistid,IsUpload) values (" + StaticClass.TokenId + ", #" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "#,#" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "# ," + LocalTitleId + "," + dt_Artist_ID + "," + dt_Spl_ID + ",0)";
                 cmdSaveLast.CommandText = strs;
                 cmdSaveLast.ExecuteNonQuery();
 
@@ -8737,7 +8737,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                 cmdSaveLast = new OleDbCommand();
                 cmdSaveLast.Connection = StaticClass.LocalCon;
-                strs = "insert into tbTokenOverDueStatus (TokenId, StatusDate,StatusTime,IsUpload) values (" + StaticClass.TokenId + ", #" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "#,#" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "#,0)";
+                strs = "insert into tbTokenOverDueStatus (TokenId, StatusDate,StatusTime,IsUpload) values (" + StaticClass.TokenId + ", #" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "#,#" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "#,0)";
                 cmdSaveLast.CommandText = strs;
                 cmdSaveLast.ExecuteNonQuery();
 
@@ -9355,7 +9355,7 @@ namespace StoreAndForwardPlayer
                 if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                 OleDbCommand cmdDelAdvt = new OleDbCommand();
                 cmdDelAdvt.Connection = StaticClass.LocalCon;
-                cmdDelAdvt.CommandText = "delete from tbAdvt  where ScheduleDate= #" + string.Format("{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "#";
+                cmdDelAdvt.CommandText = "delete from tbAdvt  where ScheduleDate= #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "#";
                 cmdDelAdvt.ExecuteNonQuery();
 
 
@@ -9363,7 +9363,7 @@ namespace StoreAndForwardPlayer
                 StaticClass.constr.Open();
                 SqlCommand cmdDel = new SqlCommand();
                 cmdDel.Connection = StaticClass.constr;
-                strDel = "delete from tbAdvertisementManualSettings where tokenid=" + Convert.ToInt32(StaticClass.TokenId) + " and ScheduleDate= '" + string.Format("{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "'";
+                strDel = "delete from tbAdvertisementManualSettings where tokenid=" + Convert.ToInt32(StaticClass.TokenId) + " and ScheduleDate= '" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "'";
                 cmdDel.CommandText = strDel;
                 cmdDel.ExecuteNonQuery();
                 StaticClass.constr.Close();
@@ -9745,7 +9745,7 @@ namespace StoreAndForwardPlayer
             string bTime = "";
             string lPath = "";
             DataTable dtDetail;
-            str = "select * from tbAdvertisement where #" + string.Format("{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "# between AdvtStartDate and AdvtEndDate order by srno";
+            str = "select * from tbAdvertisement where #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtpScheduleDate.Value) + "# between AdvtStartDate and AdvtEndDate order by srno";
             dtDetail = ObjMainClass.fnFillDataTable_Local(str);
             InitilizeAdvertisementGrid();
             if ((dtDetail.Rows.Count > 0))
@@ -9771,9 +9771,9 @@ namespace StoreAndForwardPlayer
                     {
                         dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["pMode"].Value = "Audio";
                     }
-                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["StartDate"].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
-                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["EndDate"].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
-                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["AdvtTime"].Value = string.Format("{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
+                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["StartDate"].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]);
+                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["EndDate"].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]);
+                    dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["AdvtTime"].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]);
                     if (dtDetail.Rows[iCtr]["IsMinute"].ToString().Trim() == "1")
                     {
                         dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["AdvtTime"].Value = "After " + dtDetail.Rows[iCtr]["TotalMinutes"].ToString().Trim() + " min";
@@ -9784,7 +9784,7 @@ namespace StoreAndForwardPlayer
                     }
                     if (dtDetail.Rows[iCtr]["IsBetween"].ToString().Trim() == "1")
                     {
-                        bTime = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "-" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]);
+                        bTime = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "-" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]);
                         dgAdvtComman.Rows[dgAdvtComman.Rows.Count - 1].Cells["AdvtTime"].Value = bTime;
                     }
 
@@ -10783,14 +10783,14 @@ namespace StoreAndForwardPlayer
         {
 
             string strInsert = "";
-            //string str = "spGetAdvertisementClient_TotalFina '" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','Copyright','" + StaticClass.DealerCode + "', " + StaticClass.AdvtCityId + "," + StaticClass.TokenId + "";
+            //string str = "spGetAdvertisementClient_TotalFina '" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','Copyright','" + StaticClass.DealerCode + "', " + StaticClass.AdvtCityId + "," + StaticClass.TokenId + "";
             string str = "";
             string aId = "";
             string lPath = "";
 
 
-            str = "spGetAdvtAdmin_NativeOnly '" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','NativeCR'," + StaticClass.dfClientId + "," + ReturnWeekId(DateTime.Now.DayOfWeek.ToString()) + ", " + StaticClass.AdvtCityId + "," + StaticClass.dfClientId + " , " + StaticClass.CountryId + ", " + StaticClass.Stateid + "," + StaticClass.TokenId + "";
-            //str = "spGetAdvtAdmin_NativeOnly '" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','NativeCR',7," + ReturnWeekId(DateTime.Now.DayOfWeek.ToString()) + ", 133,7 , 230, 63,194";
+            str = "spGetAdvtAdmin_NativeOnly '" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','NativeCR'," + StaticClass.dfClientId + "," + ReturnWeekId(DateTime.Now.DayOfWeek.ToString()) + ", " + StaticClass.AdvtCityId + "," + StaticClass.dfClientId + " , " + StaticClass.CountryId + ", " + StaticClass.Stateid + "," + StaticClass.TokenId + "";
+            //str = "spGetAdvtAdmin_NativeOnly '" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "','NativeCR',7," + ReturnWeekId(DateTime.Now.DayOfWeek.ToString()) + ", 133,7 , 230, 63,194";
 
 
             // str = "spGetAdvtAdmin_NativeOnly '28/Apr/2016','NativeCR',60585,5,3,60585,1,4,84695";
@@ -10866,17 +10866,17 @@ namespace StoreAndForwardPlayer
                             strInsert = "insert into tbAdvertisement(AdvtId,AdvtDisplayName,AdvtCompanyName,AdvtStartDate,AdvtEndDate,AdvtFilePath,AdvtPlayertype, ";
                             strInsert = strInsert + " DfClientId,CountryCode,TokenId,AdvtTypeId,AdvtTime ,StateId,CityId,Dealercode, AdvtTypeName,AdvthttpUrl, IsTime,IsMinute ,IsSong , TotalMinutes,TotalSongs,SrNo,IsVideo, IsVideoMute,IsPicture,IsBetween, bStime,bEtime ,playingType) values (";
                             strInsert = strInsert + " " + dtDetail.Rows[iCtr]["AdvtId"] + ", '" + dtDetail.Rows[iCtr]["AdvtDisplayName"] + "', ";
-                            strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
-                            strInsert = strInsert + " '" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
+                            strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
+                            strInsert = strInsert + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
                             strInsert = strInsert + " 'NativeCR', " + StaticClass.dfClientId + "," + StaticClass.CountryId + ",";
-                            strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
+                            strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
                             strInsert = strInsert + " " + StaticClass.Stateid + "," + StaticClass.AdvtCityId + ",'" + StaticClass.DealerCode + "',";
                             strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtTypeName"] + "', '" + dtDetail.Rows[iCtr]["AdvtFilePath"] + "' ,";
                             strInsert = strInsert + " " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsTime"]) + ", " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsMinute"]) + " , " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsSong"]) + " , ";
                             strInsert = strInsert + " " + dtDetail.Rows[iCtr]["TotalMinutes"] + " , " + dtDetail.Rows[iCtr]["TotalSongs"] + "," + dtDetail.Rows[iCtr]["Srno"] + ", ";
                             strInsert = strInsert + Convert.ToInt32(dtDetail.Rows[iCtr]["IsVideo"]) + ", " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsVideoMute"]) + " ,0 ";
-                            strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
-                            strInsert = strInsert + " ,'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
+                            strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
+                            strInsert = strInsert + " ,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
 
                             if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                             OleDbCommand cmdSave = new OleDbCommand();
@@ -10892,17 +10892,17 @@ namespace StoreAndForwardPlayer
                         strInsert = "insert into tbAdvertisement(AdvtId,AdvtDisplayName,AdvtCompanyName,AdvtStartDate,AdvtEndDate,AdvtFilePath,AdvtPlayertype, ";
                         strInsert = strInsert + " DfClientId,CountryCode,TokenId,AdvtTypeId,AdvtTime ,StateId,CityId,Dealercode, AdvtTypeName,AdvthttpUrl, IsTime,IsMinute ,IsSong , TotalMinutes,TotalSongs,SrNo,IsVideo,IsVideoMute,IsPicture,IsBetween, bStime,bEtime ,playingType) values (";
                         strInsert = strInsert + " " + dtDetail.Rows[iCtr]["AdvtId"] + ", '" + dtDetail.Rows[iCtr]["AdvtDisplayName"] + "', ";
-                        strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
-                        strInsert = strInsert + " '" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
+                        strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
+                        strInsert = strInsert + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
                         strInsert = strInsert + " 'NativeCR', " + StaticClass.dfClientId + "," + StaticClass.CountryId + ",";
-                        strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format("{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
+                        strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
                         strInsert = strInsert + " " + StaticClass.Stateid + "," + StaticClass.AdvtCityId + ",'" + StaticClass.DealerCode + "',";
                         strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtTypeName"] + "', '" + dtDetail.Rows[iCtr]["AdvtFilePath"] + "' ,";
                         strInsert = strInsert + " " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsTime"]) + ", " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsMinute"]) + " , " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsSong"]) + " , ";
                         strInsert = strInsert + " " + dtDetail.Rows[iCtr]["TotalMinutes"] + " , " + dtDetail.Rows[iCtr]["TotalSongs"] + "," + dtDetail.Rows[iCtr]["Srno"] + ", ";
                         strInsert = strInsert + "0,1,1 ";
-                        strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
-                        strInsert = strInsert + " ,'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
+                        strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
+                        strInsert = strInsert + " ,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
 
                         if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                         OleDbCommand cmdSave = new OleDbCommand();
@@ -10918,17 +10918,17 @@ namespace StoreAndForwardPlayer
                         strInsert = "insert into tbAdvertisement(AdvtId,AdvtDisplayName,AdvtCompanyName,AdvtStartDate,AdvtEndDate,AdvtFilePath,AdvtPlayertype, ";
                         strInsert = strInsert + " DfClientId,CountryCode,TokenId,AdvtTypeId,AdvtTime ,StateId,CityId,Dealercode, AdvtTypeName,AdvthttpUrl, IsTime,IsMinute ,IsSong , TotalMinutes,TotalSongs,SrNo,IsVideo,IsVideoMute,IsPicture,IsBetween, bStime,bEtime ,playingType) values (";
                         strInsert = strInsert + " " + dtDetail.Rows[iCtr]["AdvtId"] + ", '" + dtDetail.Rows[iCtr]["AdvtDisplayName"] + "', ";
-                        strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
-                        strInsert = strInsert + " '" + string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
+                        strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtCompanyName"] + "','" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtStartDate"]) + "' ,";
+                        strInsert = strInsert + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["AdvtEndDate"]) + "','" + lPath + "',";
                         strInsert = strInsert + " 'NativeCR', " + StaticClass.dfClientId + "," + StaticClass.CountryId + ",";
-                        strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format("{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
+                        strInsert = strInsert + " " + StaticClass.TokenId + ",1,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["AdvtTime"]) + "', ";
                         strInsert = strInsert + " " + StaticClass.Stateid + "," + StaticClass.AdvtCityId + ",'" + StaticClass.DealerCode + "',";
                         strInsert = strInsert + " '" + dtDetail.Rows[iCtr]["AdvtTypeName"] + "', '" + dtDetail.Rows[iCtr]["AdvtFilePath"] + "' ,";
                         strInsert = strInsert + " " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsTime"]) + ", " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsMinute"]) + " , " + Convert.ToInt32(dtDetail.Rows[iCtr]["IsSong"]) + " , ";
                         strInsert = strInsert + " " + dtDetail.Rows[iCtr]["TotalMinutes"] + " , " + dtDetail.Rows[iCtr]["TotalSongs"] + "," + dtDetail.Rows[iCtr]["Srno"] + ", ";
                         strInsert = strInsert + "0,0,0 ";
-                        strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
-                        strInsert = strInsert + " ,'" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
+                        strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[iCtr]["IsBetween"]) + ",'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bStime"]) + "'";
+                        strInsert = strInsert + " ,'" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["bEtime"]) + "','" + dtDetail.Rows[iCtr]["playingType"] + "')";
 
                         if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                         OleDbCommand cmdSave = new OleDbCommand();
@@ -11000,9 +11000,10 @@ namespace StoreAndForwardPlayer
                     picSplGif.Visible = true;
 
                     var weekNo = (int)DateTime.Now.DayOfWeek;
-                    strNew = "GetSpecialTempPlaylistSchedule " + weekNo + ", " + StaticClass.TokenId + " ," + StaticClass.dfClientId + " ,'" + string.Format("{0:dd-MMM-yyyy}", Convert.ToDateTime(DateTime.Now)) + "'";
+                    strNew = "GetSpecialTempPlaylistSchedule " + weekNo + ", " + StaticClass.TokenId + " ," + StaticClass.dfClientId + " ,'" + string.Format(cInfo, "{0:dd-MMM-yyyy}", Convert.ToDateTime(DateTime.Now)) + "'";
                     // strNew = "GetSpecialPlaylistSchedule 'NativeCR'," + weekNo + ", " + StaticClass.TokenId + " ,60583";
                     dtDetailNew = ObjMainClass.fnFillDataTable(strNew);
+                    
                     if ((dtDetailNew.Rows.Count <= 0))
                     {
                         picSplGif.Visible = false;
@@ -11053,7 +11054,7 @@ namespace StoreAndForwardPlayer
                 dtDetailNew = new DataTable();
                 strNew = "";
                 var weekNo = (int)DateTime.Now.DayOfWeek;
-                strNew = "GetSpecialTempPlaylistSchedule " + weekNo + ", " + StaticClass.TokenId + " ," + StaticClass.dfClientId + " ,'" + string.Format("{0:dd-MMM-yyyy}", Convert.ToDateTime(DateTime.Now)) + "'";
+                strNew = "GetSpecialTempPlaylistSchedule " + weekNo + ", " + StaticClass.TokenId + " ," + StaticClass.dfClientId + " ,'" + string.Format(cInfo, "{0:dd-MMM-yyyy}", Convert.ToDateTime(DateTime.Now)) + "'";
                 // strNew = "GetSpecialPlaylistSchedule 'NativeCR'," + weekNo + ", " + StaticClass.TokenId + " ,60583";
                 dtDetailNew = ObjMainClass.fnFillDataTable(strNew);
                 if ((dtDetailNew.Rows.Count > 0))
@@ -11189,14 +11190,14 @@ namespace StoreAndForwardPlayer
                             {
                                 strInsert = "";
                                 strInsert = "insert into tbSplPlaylistSchedule values(" + Convert.ToInt32(dtDetail.Rows[0]["pSchId"]);
-                                strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[0]["splPlaylistId"]) + ", #" + string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["StartTime"])) + "#,";
-                                strInsert = strInsert + " #" + string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["EndTime"])) + "#,'" + dtDetail.Rows[0]["splPlaylistName"].ToString() + "',0)";
+                                strInsert = strInsert + " ," + Convert.ToInt32(dtDetail.Rows[0]["splPlaylistId"]) + ", #" + string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["StartTime"])) + "#,";
+                                strInsert = strInsert + " #" + string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["EndTime"])) + "#,'" + dtDetail.Rows[0]["splPlaylistName"].ToString() + "',0)";
                             }
                             else
                             {
                                 strInsert = "";
                                 strInsert = "update tbSplPlaylistSchedule set splPlaylistId=" + Convert.ToInt32(dtDetail.Rows[0]["splPlaylistId"]) + ", StartTime=";
-                                strInsert = strInsert + " #" + string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["StartTime"])) + "# , EndTime= #" + string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["EndTime"])) + "# ,";
+                                strInsert = strInsert + " #" + string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["StartTime"])) + "# , EndTime= #" + string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dtDetail.Rows[0]["EndTime"])) + "# ,";
                                 strInsert = strInsert + " splName='" + dtDetail.Rows[0]["splPlaylistName"].ToString() + "' where schid=" + Convert.ToInt32(dtDetail.Rows[0]["pSchId"]);
                             }
 
@@ -11333,7 +11334,7 @@ namespace StoreAndForwardPlayer
             //mlsSql = "SELECT  * from tbSplPlaylistSchedule where #03:30 AM# >=Starttime And  #03:30 AM# <=EndTime";
 
 
-            mlsSql = "SELECT * FROM tbSpecialPlaylists_Titles WHERE isdownload=0 and SchId=(SELECT max(Schid) as Schid from tbSplPlaylistSchedule where #" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "# >=Starttime And  #" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "# <=EndTime)";
+            mlsSql = "SELECT * FROM tbSpecialPlaylists_Titles WHERE isdownload=0 and SchId=(SELECT max(Schid) as Schid from tbSplPlaylistSchedule where #" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "# >=Starttime And  #" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "# <=EndTime)";
             DataSet ds = new DataSet();
             ds = ObjMainClass.fnFillDataSet_Local(mlsSql);
             if (ds.Tables[0].Rows.Count <= 0)
@@ -12452,9 +12453,9 @@ namespace StoreAndForwardPlayer
         {
             try
             {
-                if (PlaylistTime != string.Format(fi, "{0:hh:mm tt}", DateTime.Now))
+                if (PlaylistTime != string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now))
                 {
-                    PlaylistTime = string.Format(fi, "{0:hh:mm tt}", DateTime.Now);
+                    PlaylistTime = string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now);
                     for (int iRow = 0; iRow < dgLocalPlaylist.Rows.Count; iRow++)
                     {
                         if (dgLocalPlaylist.Rows[iRow].Cells["sTime"].Value.ToString() != "Nill")
@@ -12463,7 +12464,7 @@ namespace StoreAndForwardPlayer
                             if (FirstTimeConditation == "Yes")
                             {
                                 #region Simple
-                                if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["sTime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)))))
+                                if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["sTime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)))))
                                 {
                                     StaticClass.IsPlayerClose = "No";
                                     IsFormatFirstTimeLoad = "No";
@@ -12510,14 +12511,14 @@ namespace StoreAndForwardPlayer
                                     cmdUpdate.ExecuteNonQuery();
 
                                     FirstTimeConditation = "No";
-                                    EndTime = Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)));
+                                    EndTime = Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)));
                                     StaticClass.DefaultPlaylistCurrentRow = iRow;
                                     PlaylistRow = iRow;
                                     StartPlaylist = 0;
                                     timStartPlaylistSchedule.Enabled = true;
                                     timPrayerClosing.Enabled = true;
                                     FindTime = "Yes";
-                                    StaticClass.PlayerClosingTime = string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value));
+                                    StaticClass.PlayerClosingTime = string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value));
                                     //  timGetSplPlaylistScheduleTime.Enabled = false;
                                     if (timResetSong.Enabled == false)
                                     {
@@ -12530,7 +12531,7 @@ namespace StoreAndForwardPlayer
                             else
                             {
                                 #region Step 2
-                                if (string.Format(fi, "{0:hh:mm tt}", DateTime.Now) == string.Format(fi, "{0:hh:mm tt}", dgLocalPlaylist.Rows[iRow].Cells["sTime"].Value))
+                                if (string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) == string.Format(cInfo, "{0:hh:mm tt}", dgLocalPlaylist.Rows[iRow].Cells["sTime"].Value))
                                 {
                                     StaticClass.IsPlayerClose = "No";
                                     IsFormatFirstTimeLoad = "No";
@@ -12584,14 +12585,14 @@ namespace StoreAndForwardPlayer
                                     cmdUpdate.ExecuteNonQuery();
 
                                     FirstTimeConditation = "No";
-                                    EndTime = Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)));
+                                    EndTime = Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value)));
                                     StaticClass.DefaultPlaylistCurrentRow = iRow;
                                     PlaylistRow = iRow;
                                     StartPlaylist = 0;
                                     timStartPlaylistSchedule.Enabled = true;
                                     timPrayerClosing.Enabled = true;
                                     FindTime = "Yes";
-                                    StaticClass.PlayerClosingTime = string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value));
+                                    StaticClass.PlayerClosingTime = string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgLocalPlaylist.Rows[iRow].Cells["eTime"].Value));
                                     if (timResetSong.Enabled == false)
                                     {
                                         timResetSong.Enabled = true;
@@ -13307,7 +13308,7 @@ namespace StoreAndForwardPlayer
             string str = "";
             int iCtr;
             DataTable dtDetail;
-            str = "select * from tbPrayer where #" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between sdate and edate";
+            str = "select * from tbPrayer where #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between sdate and edate";
             dtDetail = ObjMainClass.fnFillDataTable_Local(str);
             InitilizePrayerGrid(dgGrid);
             if ((dtDetail.Rows.Count > 0))
@@ -13316,10 +13317,10 @@ namespace StoreAndForwardPlayer
                 {
                     dgGrid.Rows.Add();
                     dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["pId"].Value = dtDetail.Rows[iCtr]["pId"];
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["sDate"].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["sDate"]);
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["eDate"].Value = string.Format("{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["eDate"]);
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["sTime"].Value = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]);
-                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["eTime"].Value = string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["sDate"].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["sDate"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["eDate"].Value = string.Format(cInfo, "{0:dd-MMM-yyyy}", dtDetail.Rows[iCtr]["eDate"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["sTime"].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]);
+                    dgGrid.Rows[dgGrid.Rows.Count - 1].Cells["eTime"].Value = string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]);
                 }
                 foreach (DataGridViewRow row in dgGrid.Rows)
                 {
@@ -13349,14 +13350,14 @@ namespace StoreAndForwardPlayer
                 musicPlayer1.settings.volume = Convert.ToInt32(pVolume);
                 musicPlayer2.settings.volume = Convert.ToInt32(pVolume);
             }
-            if (PrayerTime != string.Format(fi, "{0:hh:mm tt}", DateTime.Now))
+            if (PrayerTime != string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now))
             {
-                PrayerTime = string.Format(fi, "{0:hh:mm tt}", DateTime.Now);
+                PrayerTime = string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now);
                 
 
                 for (int iRow = 0; iRow < dgPrayer.Rows.Count; iRow++)
                 {
-                    if (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["sTime"].Value)) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["eTime"].Value))))
+                    if (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["sTime"].Value)) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["eTime"].Value))))
                     {
                         if (IsPrayerRunning == "No")
                         {
@@ -13369,7 +13370,7 @@ namespace StoreAndForwardPlayer
                             break;
                         }
                     }
-                    if (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) == Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["eTime"].Value)))
+                    if (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) == Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", dgPrayer.Rows[iRow].Cells["eTime"].Value)))
                     {
                         UnMute();
                         IsPrayerRunning = "No";
@@ -13404,8 +13405,8 @@ namespace StoreAndForwardPlayer
             string strPrayer = "";
             strPrayer = "";
             strPrayer = strPrayer + " insert into tbTokenPrayerStatus(TokenId,StatusDate,StatusTime,IsUpload) values( " + StaticClass.TokenId + ", ";
-            strPrayer = strPrayer + "  '" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "', ";
-            strPrayer = strPrayer + " '" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "',0)";
+            strPrayer = strPrayer + "  '" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "', ";
+            strPrayer = strPrayer + " '" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "',0)";
 
             if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
             OleDbCommand cmdPrayerStatus = new OleDbCommand();
@@ -13440,7 +13441,7 @@ namespace StoreAndForwardPlayer
         private void timPrayerClosing_Tick(object sender, EventArgs e)
         {
             if (StaticClass.PlayerClosingTime == "") { timPrayerClosing.Enabled = false; return; }
-            if (Convert.ToDateTime(StaticClass.PlayerClosingTime) == Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)))
+            if (Convert.ToDateTime(StaticClass.PlayerClosingTime) == Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)))
             {
                 StaticClass.IsPlayerClose = "Yes";
                 //if (StaticClass.LocalCon.State == ConnectionState.Open) { StaticClass.LocalCon.Close(); }
@@ -13458,7 +13459,7 @@ namespace StoreAndForwardPlayer
         private void GetAdvtPlayingType()
         {
             DataTable dtPlayType = new DataTable();
-            string str = "select top 1 * from tbAdvertisement where #" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by AdvtId desc";
+            string str = "select top 1 * from tbAdvertisement where #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "# between AdvtStartDate and AdvtEndDate order by AdvtId desc";
             dtPlayType = ObjMainClass.fnFillDataTable_Local(str);
             if (dtPlayType.Rows.Count > 0)
             {
@@ -13490,7 +13491,7 @@ namespace StoreAndForwardPlayer
                     StaticClass.TotalAdvtSongs = 1;
                     StaticClass.AdvtTime = 0;
                     StaticClass.IsAdvtBetweenTime = true;
-                    StaticClass.AdvtClosingTime = string.Format(fi, "{0:hh:mm tt}", DateTime.Now);
+                    StaticClass.AdvtClosingTime = string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now);
                 }
 
             }
@@ -13500,7 +13501,7 @@ namespace StoreAndForwardPlayer
             string strZ = "";
             try
             {
-                string strTotal = "select * from tbTokenPlayedSongs where playDate=#" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
+                string strTotal = "select top 50 * from tbTokenPlayedSongs where isUpload=0 order by id desc";
                 DataTable dtGet = new DataTable();
                 dtGet = ObjMainClass.fnFillDataTable_Local(strTotal);
 
@@ -13509,7 +13510,7 @@ namespace StoreAndForwardPlayer
                     for (int iCtr = 0; (iCtr <= (dtGet.Rows.Count - 1)); iCtr++)
                     {
                         strZ = "insert into tbTokenPlayedSongs(Tokenid,PlayDTP,TitleId,ArtistId,splPlaylistId) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["PlayDate"]) + " " + string.Format(fi, "{0:hh:mm tt}", dtGet.Rows[iCtr]["PlayTime"]) + "', " + dtGet.Rows[iCtr]["TitleID"] + " ,";
+                        strZ = strZ + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["PlayDate"]) + " " + string.Format(cInfo, "{0:hh:mm tt}", dtGet.Rows[iCtr]["PlayTime"]) + "', " + dtGet.Rows[iCtr]["TitleID"] + " ,";
                         strZ = strZ + " " + dtGet.Rows[iCtr]["ArtistId"] + " , " + dtGet.Rows[iCtr]["splPlaylistId"] + " )";
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
@@ -13529,7 +13530,7 @@ namespace StoreAndForwardPlayer
 
 
                 strTotal = "";
-                strTotal = "select * from tbTokenOverDueStatus where StatusDate=#" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
+                strTotal = "select * from tbTokenOverDueStatus where StatusDate=#" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
                 dtGet = new DataTable();
                 dtGet = ObjMainClass.fnFillDataTable_Local(strTotal);
                 strZ = "";
@@ -13537,15 +13538,15 @@ namespace StoreAndForwardPlayer
                 {
                     for (int iCtr = 0; (iCtr <= (dtGet.Rows.Count - 1)); iCtr++)
                     {
-                        strZ = "insert into tbTokenOverDueStatus(Tokenid,StatusDateTime) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + " " + string.Format(fi, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
-                        if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
-                        StaticClass.constr.Open();
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.Connection = StaticClass.constr;
-                        cmd.CommandText = strZ;
-                        cmd.ExecuteNonQuery();
-                        StaticClass.constr.Close();
+                        //strZ = "insert into tbTokenOverDueStatus(Tokenid,StatusDateTime) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , ";
+                        //strZ = strZ + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + " " + string.Format(cInfo, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
+                        //if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
+                        //StaticClass.constr.Open();
+                        //SqlCommand cmd = new SqlCommand();
+                        //cmd.Connection = StaticClass.constr;
+                        //cmd.CommandText = strZ;
+                        //cmd.ExecuteNonQuery();
+                        //StaticClass.constr.Close();
 
                         if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                         OleDbCommand cmdUpdateAll = new OleDbCommand();
@@ -13557,7 +13558,7 @@ namespace StoreAndForwardPlayer
 
                 #region Upload Advt Status
                 strTotal = "";
-                strTotal = "select * from tbTokenAdvtStatus where StatusDate=#" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
+                strTotal = "select * from tbTokenAdvtStatus where StatusDate=#" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
                 dtGet = new DataTable();
                 dtGet = ObjMainClass.fnFillDataTable_Local(strTotal);
                 strZ = "";
@@ -13566,7 +13567,7 @@ namespace StoreAndForwardPlayer
                     for (int iCtr = 0; (iCtr <= (dtGet.Rows.Count - 1)); iCtr++)
                     {
                         strZ = "insert into tbTokenAdvtStatus(TokenId,AdvtId,StatusDate,StatusTime) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , " + dtGet.Rows[iCtr]["AdvtId"] + ", ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(fi, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
+                        strZ = strZ + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(cInfo, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
                         SqlCommand cmd = new SqlCommand();
@@ -13586,7 +13587,7 @@ namespace StoreAndForwardPlayer
 
                 #region Upload Login Status
                 strTotal = "";
-                strTotal = "select * from tbTokenLoginStatus where StatusDate=#" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
+                strTotal = "select * from tbTokenLoginStatus where StatusDate=#" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
                 dtGet = new DataTable();
                 dtGet = ObjMainClass.fnFillDataTable_Local(strTotal);
                 strZ = "";
@@ -13595,7 +13596,7 @@ namespace StoreAndForwardPlayer
                     for (int iCtr = 0; (iCtr <= (dtGet.Rows.Count - 1)); iCtr++)
                     {
                         strZ = "insert into tbTokenLoginStatus(TokenId,StatusDate,StatusTime) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(fi, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
+                        strZ = strZ + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(cInfo, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
                         SqlCommand cmd = new SqlCommand();
@@ -13615,7 +13616,7 @@ namespace StoreAndForwardPlayer
 
                 #region Upload Prayer Status
                 strTotal = "";
-                strTotal = "select * from tbTokenPrayerStatus where StatusDate=#" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
+                strTotal = "select * from tbTokenPrayerStatus where StatusDate=#" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "# and isUpload=0";
                 dtGet = new DataTable();
                 dtGet = ObjMainClass.fnFillDataTable_Local(strTotal);
                 strZ = "";
@@ -13624,7 +13625,7 @@ namespace StoreAndForwardPlayer
                     for (int iCtr = 0; (iCtr <= (dtGet.Rows.Count - 1)); iCtr++)
                     {
                         strZ = "insert into tbTokenPrayerStatus(TokenId,StatusDate,StatusTime) values(" + dtGet.Rows[iCtr]["Tokenid"] + " , ";
-                        strZ = strZ + " '" + string.Format("{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(fi, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
+                        strZ = strZ + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", dtGet.Rows[iCtr]["StatusDate"]) + "','" + string.Format(cInfo, "{0:hh:mm tt}", dtGet.Rows[iCtr]["StatusTime"]) + "') ";
                         if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                         StaticClass.constr.Open();
                         SqlCommand cmd = new SqlCommand();
@@ -13647,10 +13648,11 @@ namespace StoreAndForwardPlayer
             catch (Exception ex)
             {
                 var h = ex.Message.ToString();
+                
             }
         }
         Int32 AdvtTime = 0;
-        string CrDate = string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date);
+        string CrDate = string.Format(new CultureInfo("en-IN"), "{0:dd/MMM/yyyy}", DateTime.Now.Date);
         string IsExitApp = "No";
         Int32 PlayNowWeb = 0;
         private void timRefershData_Tick(object sender, EventArgs e)
@@ -13674,7 +13676,7 @@ namespace StoreAndForwardPlayer
                 }
                 PlayNowWeb = 0;
             }
-            if (CrDate != string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date))
+            if (CrDate != string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date))
             {
                 AdvtTime = 600;
             }
@@ -13781,9 +13783,9 @@ namespace StoreAndForwardPlayer
                     }
                     if (StaticClass.IsStore == true)
                     {
-                        if (CrDate != string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date))
+                        if (CrDate != string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date))
                         {
-                            CrDate = string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date);
+                            CrDate = string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date);
                             IsUpdateFind = "No";
                             bgUpdatedExeDownload.RunWorkerAsync();
                         }
@@ -13809,8 +13811,8 @@ namespace StoreAndForwardPlayer
                 for (int iCtr = 0; (iCtr <= (dtDetail.Rows.Count - 1)); iCtr++)
                 {
                     str = "";
-                    str = "insert into tbPrayer(pId,sDate,eDate,sTime,eTime) values(" + dtDetail.Rows[iCtr]["pId"] + ", #" + string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["sDate"]) + "# ,";
-                    str = str + " #" + string.Format("{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["eDate"]) + "# ,#" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]) + "#, #" + string.Format(fi, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]) + "# )";
+                    str = "insert into tbPrayer(pId,sDate,eDate,sTime,eTime) values(" + dtDetail.Rows[iCtr]["pId"] + ", #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["sDate"]) + "# ,";
+                    str = str + " #" + string.Format(cInfo, "{0:dd/MMM/yyyy}", dtDetail.Rows[iCtr]["eDate"]) + "# ,#" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["sTime"]) + "#, #" + string.Format(cInfo, "{0:hh:mm tt}", dtDetail.Rows[iCtr]["eTime"]) + "# )";
                     if (StaticClass.LocalCon.State == ConnectionState.Closed) { StaticClass.LocalCon.Open(); }
                     OleDbCommand cmdIns = new OleDbCommand();
                     cmdIns.Connection = StaticClass.LocalCon;
@@ -13919,7 +13921,7 @@ namespace StoreAndForwardPlayer
 
                     #region Upload LogOut Status
                     string strZ1 = "insert into tbTokenLogOutStatus(TokenId,StatusDate,StatusTime) values(" + StaticClass.TokenId + " , ";
-                    strZ1 = strZ1 + " '" + string.Format("{0:dd-MMM-yyyy}", DateTime.Now.Date) + "','" + string.Format(fi, "{0:hh:mm tt}", DateTime.Now) + "') ";
+                    strZ1 = strZ1 + " '" + string.Format(cInfo, "{0:dd-MMM-yyyy}", DateTime.Now.Date) + "','" + string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) + "') ";
                     if (StaticClass.constr.State == ConnectionState.Open) StaticClass.constr.Close();
                     StaticClass.constr.Open();
                     SqlCommand cmdLog = new SqlCommand();
@@ -14039,13 +14041,13 @@ namespace StoreAndForwardPlayer
         private void FillAdvtTempData()
         {
             DataTable dtDetailLocal;
-            string str = "select * from tbAdvt where ScheduleDate=#" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
+            string str = "select * from tbAdvt where ScheduleDate=#" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
             dtDetailLocal = ObjMainClass.fnFillDataTable_Local(str);
             InitilizeAdvtTempGrid();
             for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
             {
 
-                if ((Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(fi, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
+                if ((Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) >= Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bStime"].Value)))) && (Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now)) < Convert.ToDateTime(string.Format(cInfo, "{0:hh:mm tt}", Convert.ToDateTime(dgAdvt.Rows[iRow].Cells["bEtime"].Value)))))
                 {
                     if (dgAdvt.Rows[iRow].Cells["Status"].Style.BackColor == Color.LightGreen)
                     {
@@ -14079,13 +14081,13 @@ namespace StoreAndForwardPlayer
         private void FillAdvtTempDataSingle()
         {
             DataTable dtDetailLocal;
-            string str = "select * from tbAdvt where ScheduleDate=#" + string.Format("{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
+            string str = "select * from tbAdvt where ScheduleDate=#" + string.Format(cInfo, "{0:dd/MMM/yyyy}", DateTime.Now.Date) + "#";
             dtDetailLocal = ObjMainClass.fnFillDataTable_Local(str);
             InitilizeAdvtTempGrid();
             for (int iRow = 0; iRow < dgAdvt.Rows.Count; iRow++)
             {
 
-                if (string.Format(fi, "{0:hh:mm tt}", DateTime.Now) == string.Format(fi, "{0:hh:mm tt}", dgAdvt.Rows[iRow].Cells["bStime"].Value))
+                if (string.Format(cInfo, "{0:hh:mm tt}", DateTime.Now) == string.Format(cInfo, "{0:hh:mm tt}", dgAdvt.Rows[iRow].Cells["bStime"].Value))
                 {
                     if (dgAdvt.Rows[iRow].Cells["Status"].Style.BackColor == Color.LightGreen)
                     {

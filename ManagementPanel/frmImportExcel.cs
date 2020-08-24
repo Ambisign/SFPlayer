@@ -602,16 +602,17 @@ namespace ManagementPanel
                                     StaticClass.constr.Open();
                                     SqlCommand cmd = new SqlCommand("InsertArtistsAlbumsTitles_AlenkaMedia", StaticClass.constr);
                                     cmd.CommandType = CommandType.StoredProcedure;
-
-
-
-                                    cmd.Parameters.Add(new SqlParameter("@TiTleTiTle", SqlDbType.VarChar));
+                                    
+                                    cmd.Parameters.Add(new SqlParameter("@TiTleTiTle", SqlDbType.NVarChar));
                                     cmd.Parameters["@TiTleTiTle"].Value = dtDetail.Rows[iCtr]["title"].ToString();
+                                     
 
-                                    cmd.Parameters.Add(new SqlParameter("@TitleArtistName", SqlDbType.VarChar));
+                                    
+                                    cmd.Parameters.Add(new SqlParameter("@TitleArtistName", SqlDbType.NVarChar));
                                     cmd.Parameters["@TitleArtistName"].Value = dtDetail.Rows[iCtr]["Artist"].ToString();
+                                    var k2 = dtDetail.Rows[iCtr]["Artist"].ToString();
 
-                                    cmd.Parameters.Add(new SqlParameter("@AlbumName", SqlDbType.VarChar));
+                                    cmd.Parameters.Add(new SqlParameter("@AlbumName", SqlDbType.NVarChar));
                                     cmd.Parameters["@AlbumName"].Value = dtDetail.Rows[iCtr]["Album"].ToString();
 
                                     cmd.Parameters.Add(new SqlParameter("@titlecategoryid", SqlDbType.BigInt));
@@ -620,7 +621,7 @@ namespace ManagementPanel
                                     cmd.Parameters.Add(new SqlParameter("@titleSubcategoryid", SqlDbType.VarChar));
                                     cmd.Parameters["@titleSubcategoryid"].Value = dtDetail.Rows[iCtr]["titleSubcategoryid"].ToString();
                                     
-                                    cmd.Parameters.Add(new SqlParameter("@Time", SqlDbType.VarChar));
+                                    cmd.Parameters.Add(new SqlParameter("@Time", SqlDbType.NVarChar));
                                     cmd.Parameters["@Time"].Value ="00:" + string.Format("{0:mm:ss}", dtDetail.Rows[iCtr]["time"]);
 
                                     cmd.Parameters.Add(new SqlParameter("@AlbumLabel", SqlDbType.VarChar));
@@ -642,7 +643,7 @@ namespace ManagementPanel
                                     cmd.Parameters.Add(new SqlParameter("@mType", SqlDbType.VarChar));
                                     cmd.Parameters["@mType"].Value = mediaType;
 
-                                    cmd.Parameters.Add(new SqlParameter("@acategory", SqlDbType.VarChar));
+                                    cmd.Parameters.Add(new SqlParameter("@acategory", SqlDbType.NVarChar));
                                     cmd.Parameters["@acategory"].Value = dtDetail.Rows[iCtr]["aCategory"];
 
                                     cmd.Parameters.Add(new SqlParameter("@language", SqlDbType.VarChar));
@@ -668,7 +669,8 @@ namespace ManagementPanel
                                     cmd.Parameters.Add(new SqlParameter("@Explicit", SqlDbType.Int));
                                     cmd.Parameters["@Explicit"].Value = dtDetail.Rows[iCtr]["IsExplicit"];
                                     cmd.Parameters.Add(new SqlParameter("@label", SqlDbType.VarChar));
-                                    cmd.Parameters["@label"].Value = dtDetail.Rows[iCtr]["lbel"]; 
+                                    cmd.Parameters["@label"].Value = dtDetail.Rows[iCtr]["lbel"];
+                                    var k1 = dtDetail.Rows[iCtr]["lbel"].ToString();
                                     cmd.Parameters.Add(new SqlParameter("@dbType", SqlDbType.VarChar));
                                     cmd.Parameters["@dbType"].Value = "Both";
                                     Title_Id = Convert.ToInt32(cmd.ExecuteScalar());
