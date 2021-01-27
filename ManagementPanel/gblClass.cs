@@ -57,6 +57,7 @@ namespace ManagementPanel
         }
         public bool CheckForInternetConnection()
         {
+             
             try
             {
                 using (var client = new WebClient())

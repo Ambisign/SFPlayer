@@ -29,7 +29,7 @@ namespace StoreAndForwardPlayer
 
                 gblClass objMainClass = new gblClass();
 
-                StaticClass.constr = new SqlConnection("Data Source=134.119.178.26;database=OnlineDB;uid=sa;password=Jan@Server007;Connect Timeout=5000");
+                StaticClass.constr = new SqlConnection("Data Source=146.0.237.246;database=OnlineDB;uid=sa;password=Jan@Server007;Connect Timeout=5000");
                 StaticClass.LocalCon.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + "\\db.mdb;User Id=admin;Password=;";
                 string str = "";
                 string localCode = "";

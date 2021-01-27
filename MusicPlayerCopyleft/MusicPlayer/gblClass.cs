@@ -218,12 +218,13 @@ namespace StoreAndForwardPlayer
        public  bool CheckForInternetConnection()
        {
 
-           try
-           {
+             
+            try
+            {
                 
                 using (var client = new WebClient())
 
-               using (var stream = client.OpenRead("http://134.119.178.26"))
+               using (var stream = client.OpenRead("http://api.advikon.com"))
                {
                    return true;
                }

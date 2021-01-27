@@ -31,3 +31,15 @@ F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Pl
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.GenerateResource.Cache
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.exe
 F:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.pdb
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateSoreAndForwardPlayer.exe
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateSoreAndForwardPlayer.pdb
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csprojAssemblyReference.cache
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.ResolveComReference.cache
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmTitles.resources
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmUpdateMusicPlayer.resources
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.Properties.Resources.resources
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.GenerateResource.cache
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.CoreCompileInputs.cache
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.exe
+E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.pdb
