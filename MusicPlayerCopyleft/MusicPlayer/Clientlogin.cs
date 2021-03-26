@@ -828,7 +828,7 @@ namespace StoreAndForwardPlayer
                         #region Update
 
                         string localPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
-                        string UpdateFileLocation = "ftp://134.119.178.26:21/Application/UpdatePatch/UpdateStoreAndForwardPlayer.exe";
+                        string UpdateFileLocation = "ftp://146.0.237.246:21/Application/UpdatePatch/UpdateStoreAndForwardPlayer.exe";
 
 
                         try

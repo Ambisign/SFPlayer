@@ -11754,7 +11754,7 @@ namespace StoreAndForwardPlayer
 
             String RemoteFtpPath = "";
              
-                RemoteFtpPath = "http://134.119.178.26/mp3files/" + SplSongName.ToString() + ".mp3";
+                RemoteFtpPath = "http://api.advikon.com/mp3files/" + SplSongName.ToString() + ".mp3";
              
             String LocalDestinationPath = Application.StartupPath + "\\so\\" + SplSongName + ".mp3";
             try
@@ -12985,7 +12985,7 @@ namespace StoreAndForwardPlayer
                     Stream streamLocal = null;
                     String RemoteFtpPath = "";
                     
-                        RemoteFtpPath = "http://134.119.178.26/mp3files/" + dsDownload.Tables[0].Rows[0]["titleId"].ToString() + ".mp3";
+                        RemoteFtpPath = "http://api.advikon.com/mp3files/" + dsDownload.Tables[0].Rows[0]["titleId"].ToString() + ".mp3";
                     
 
                     //String RemoteFtpPath = "http://85.195.82.94/mp3files/" + dsDownload.Tables[0].Rows[0]["titleId"] + ".mp3";
@@ -13857,7 +13857,7 @@ namespace StoreAndForwardPlayer
                         IsUpdateFind = "Yes";
                         #region Update
                         string localPath = Application.StartupPath + "\\UpdateStoreAndForwardPlayer.exe";
-                        string UpdateFileLocation = "ftp://134.119.178.26:21/Application/UpdatePatch/UpdateStoreAndForwardPlayer.exe";
+                        string UpdateFileLocation = "ftp://146.0.237.246:21/Application/UpdatePatch/UpdateStoreAndForwardPlayer.exe";
 
                         requestFileDownload = (FtpWebRequest)WebRequest.Create(UpdateFileLocation);
                         requestFileDownload.Credentials = new NetworkCredential("ftpAdminAll", "Admin@All007");
@@ -14328,7 +14328,7 @@ namespace StoreAndForwardPlayer
                     {
                         if (wcDownloadRequestSong.IsBusy == false)
                         {
-                            string RemoteFtpPath = "http://134.119.178.26/mp3files/" + localSongId + ".mp3";
+                            string RemoteFtpPath = "http://api.advikon.com/mp3files/" + localSongId + ".mp3";
                             wcDownloadRequestSong.DownloadFileAsync(new Uri(RemoteFtpPath), localfilename);
                         }
                     }
