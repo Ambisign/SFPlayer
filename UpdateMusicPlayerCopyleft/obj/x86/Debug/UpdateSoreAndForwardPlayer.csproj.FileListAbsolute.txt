@@ -43,3 +43,15 @@ E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Pl
 E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.CoreCompileInputs.cache
 E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.exe
 E:\Projects\MusicPlayer\WorkingProjects\MyClaud\GitHub-Upload\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.pdb
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateSoreAndForwardPlayer.exe
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\bin\Debug\UpdateSoreAndForwardPlayer.pdb
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csprojAssemblyReference.cache
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\Interop.NetFwTypeLib.dll
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.ResolveComReference.cache
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmTitles.resources
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateNativePlayerCopyright.frmUpdateMusicPlayer.resources
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.Properties.Resources.resources
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.GenerateResource.cache
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.csproj.CoreCompileInputs.cache
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.exe
+D:\WorkingFolder\Advikon\GitHUb\StoreAndForward-Player\UpdateMusicPlayerCopyleft\obj\x86\Debug\UpdateSoreAndForwardPlayer.pdb

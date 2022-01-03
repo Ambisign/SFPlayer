@@ -327,10 +327,11 @@ namespace StoreAndForwardPlayer
             //mlsSql = "SELECT  Titles.TitleID, Titles.Title FROM TitlesInPlaylists INNER JOIN Titles ON TitlesInPlaylists.TitleID = Titles.TitleID where TitlesInPlaylists.PlaylistID=" + Convert.ToInt32(currentPlayRow);
             if (StaticClass.ScheduleType == "OneToOnePlaylist")
             {
-                mlsSql = " SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
+                mlsSql = "select  TitleID,  Title, Time, AlbumName ,TitleYear ,   ArtistName from ( SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
                 mlsSql = mlsSql + " 0 as TitleYear ,  ltrim(st.arname) as ArtistName,  TitlesInPlaylists.id FROM (TitlesInPlaylists ";
                 mlsSql = mlsSql + " INNER JOIN tbSpecialPlaylists_Titles st ON TitlesInPlaylists.TitleID = st.TitleID )  ";
                 mlsSql = mlsSql + " ORDER BY  Rnd(-(date() * TitlesInPlaylists.Id) * Time()),Rnd(-(date() * TitlesInPlaylists.titleid) * Time())";
+                mlsSql = mlsSql + "             ) as km group by TitleID,  Title, Time, AlbumName ,             TitleYear ,   ArtistName             ORDER BY  Rnd(-(date() * titleid) * Time())";
             }
             else
             {
@@ -5122,10 +5123,11 @@ namespace StoreAndForwardPlayer
                 DataTable dtDetail;
                 if (StaticClass.ScheduleType == "OneToOnePlaylist")
                 {
-                    mlsSql = " SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
+                    mlsSql = "select  TitleID,  Title, Time, AlbumName ,TitleYear ,   ArtistName from ( SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
                     mlsSql = mlsSql + " 0 as TitleYear ,  ltrim(st.arname) as ArtistName,  TitlesInPlaylists.id FROM (TitlesInPlaylists ";
                     mlsSql = mlsSql + " INNER JOIN tbSpecialPlaylists_Titles st ON TitlesInPlaylists.TitleID = st.TitleID )  ";
                     mlsSql = mlsSql + " ORDER BY  Rnd(-(date() * TitlesInPlaylists.Id) * Time()),Rnd(-(date() * TitlesInPlaylists.titleid) * Time())";
+                    mlsSql = mlsSql + "             ) as km group by TitleID,  Title, Time, AlbumName ,             TitleYear ,   ArtistName             ORDER BY  Rnd(-(date() * titleid) * Time())";
                 }
                 else
                 {
@@ -10216,10 +10218,11 @@ namespace StoreAndForwardPlayer
                 DataSet dtse = new DataSet();
                 if (StaticClass.ScheduleType == "OneToOnePlaylist")
                 {
-                    mlsSql = " SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
+                    mlsSql = "select  TitleID,  Title, Time, AlbumName ,TitleYear ,   ArtistName from ( SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
                     mlsSql = mlsSql + " 0 as TitleYear ,  ltrim(st.arname) as ArtistName,  TitlesInPlaylists.id FROM (TitlesInPlaylists ";
                     mlsSql = mlsSql + " INNER JOIN tbSpecialPlaylists_Titles st ON TitlesInPlaylists.TitleID = st.TitleID )  ";
                     mlsSql = mlsSql + " ORDER BY  Rnd(-(date() * TitlesInPlaylists.Id) * Time()),Rnd(-(date() * TitlesInPlaylists.titleid) * Time())";
+                    mlsSql = mlsSql + "             ) as km group by TitleID,  Title, Time, AlbumName ,             TitleYear ,   ArtistName             ORDER BY  Rnd(-(date() * titleid) * Time())";
                 }
                 else
                 {
@@ -11173,9 +11176,18 @@ namespace StoreAndForwardPlayer
                         LocalSplId = Convert.ToInt32(dtDetailNew.Rows[iCtr]["splPlaylistId"]);
                         #region Save in main table
                         strNew = "";
-                        strNew = "select tbSpecialPlaylistSchedule.pSchId,tbSpecialPlaylists.splPlaylistName,tbSpecialPlaylistSchedule.StartTime,tbSpecialPlaylistSchedule.EndTime , ";
-                        strNew = strNew + " tbSpecialPlaylistSchedule.splPlaylistId from tbSpecialPlaylistSchedule  inner join tbSpecialPlaylists on tbSpecialPlaylists.splPlaylistid= tbSpecialPlaylistSchedule.splPlaylistid  ";
-                        strNew = strNew + " where tbSpecialPlaylistSchedule.pSchId=   " + LocalpSchId;
+                        if (dtDetailNew.Rows[iCtr]["pType"].ToString() != "T")
+                        {
+                            strNew = "select tbSpecialPlaylistSchedule.pSchId,tbSpecialPlaylists.splPlaylistName,tbSpecialPlaylistSchedule.StartTime,tbSpecialPlaylistSchedule.EndTime , ";
+                            strNew = strNew + " tbSpecialPlaylistSchedule.splPlaylistId from tbSpecialPlaylistSchedule  inner join tbSpecialPlaylists on tbSpecialPlaylists.splPlaylistid= tbSpecialPlaylistSchedule.splPlaylistid  ";
+                            strNew = strNew + " where tbSpecialPlaylistSchedule.pSchId=   " + LocalpSchId;
+                        }
+                        if (dtDetailNew.Rows[iCtr]["pType"].ToString() == "T")
+                        {
+                            strNew = "select tbSpecialTempPlaylistSchedule.pSchId,tbSpecialPlaylists.splPlaylistName,tbSpecialTempPlaylistSchedule.StartTime,tbSpecialTempPlaylistSchedule.EndTime , ";
+                            strNew = strNew + " tbSpecialTempPlaylistSchedule.splPlaylistId from tbSpecialTempPlaylistSchedule  inner join tbSpecialPlaylists on tbSpecialPlaylists.splPlaylistid= tbSpecialTempPlaylistSchedule.splPlaylistid  ";
+                            strNew = strNew + " where tbSpecialTempPlaylistSchedule.pSchId=   " + LocalpSchId;
+                        }
                         dtDetail = new DataTable();
 
                         dtDetail = ObjMainClass.fnFillDataTable(strNew);
@@ -11183,8 +11195,15 @@ namespace StoreAndForwardPlayer
                         if ((dtDetail.Rows.Count > 0))
                         {
                             strGet = "";
-                            strGet = "select * from tbSplPlaylistSchedule where SchId=" + Convert.ToInt32(dtDetail.Rows[0]["pSchId"]);
-                            dtGetRecord = new DataTable();
+                            if (dtDetailNew.Rows[iCtr]["pType"].ToString() != "T")
+                            {
+                                strGet = "select * from tbSplPlaylistSchedule where SchId=" + Convert.ToInt32(dtDetail.Rows[0]["pSchId"]);
+                            }
+                            if (dtDetailNew.Rows[iCtr]["pType"].ToString() == "T")
+                            {
+                                strGet = "select * from tbSpecialTempPlaylistSchedule where SchId=" + Convert.ToInt32(dtDetail.Rows[0]["pSchId"]);
+                            }
+                                dtGetRecord = new DataTable();
                             dtGetRecord = ObjMainClass.fnFillDataTable_Local(strGet);
                             if (dtGetRecord.Rows.Count <= 0)
                             {
@@ -11210,8 +11229,16 @@ namespace StoreAndForwardPlayer
                         #endregion
                         #region Save Weekdays
                         strNew = "";
-                        strNew = "select * from tbSpecialPlaylistSchedule_Weekday ";
-                        strNew = strNew + " where pSchId=   " + LocalpSchId;
+                        if (dtDetailNew.Rows[iCtr]["pType"].ToString() != "T")
+                        {
+                            strNew = "select * from tbSpecialPlaylistSchedule_Weekday ";
+                            strNew = strNew + " where pSchId=   " + LocalpSchId;
+                        }
+                        if (dtDetailNew.Rows[iCtr]["pType"].ToString() == "T")
+                        {
+                            strNew = "select * from tbSpecialTempPlaylistSchedule_Weekday ";
+                            strNew = strNew + " where pSchId=   " + LocalpSchId;
+                        }
                         dtDetail = new DataTable();
                         dtDetail = ObjMainClass.fnFillDataTable(strNew);
                         if (dtDetail.Rows.Count <= 0) { IsDeleteAllOgg = true; return; }
@@ -12685,10 +12712,11 @@ namespace StoreAndForwardPlayer
 
                 if (StaticClass.ScheduleType == "OneToOnePlaylist")
                 {
-                    mlsSql = " SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
+                    mlsSql = "select  TitleID,  Title, Time, AlbumName ,TitleYear ,   ArtistName from ( SELECT st.TitleID, ltrim(st.Title) as Title, st.Time, st.alname AS AlbumName ,";
                     mlsSql = mlsSql + " 0 as TitleYear ,  ltrim(st.arname) as ArtistName,  TitlesInPlaylists.id FROM (TitlesInPlaylists ";
                     mlsSql = mlsSql + " INNER JOIN tbSpecialPlaylists_Titles st ON TitlesInPlaylists.TitleID = st.TitleID )  ";
                     mlsSql = mlsSql + " ORDER BY  Rnd(-(date() * TitlesInPlaylists.Id) * Time()),Rnd(-(date() * TitlesInPlaylists.titleid) * Time())";
+                    mlsSql = mlsSql + "             ) as km group by TitleID,  Title, Time, AlbumName ,             TitleYear ,   ArtistName             ORDER BY  Rnd(-(date() * titleid) * Time())";
                 }
                 else
                 {
